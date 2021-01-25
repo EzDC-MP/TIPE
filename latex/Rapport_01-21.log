@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.13)  25 JAN 2021 18:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.13)  25 JAN 2021 18:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -467,43 +467,94 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 31.
-<Figure_Prophet.png, id=17, 389.455pt x 298.11375pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--32
+
+ []
+
+<Figure_EN.png, id=17, 462.528pt x 346.896pt>
+File: Figure_EN.png Graphic file (type png)
+<use Figure_EN.png>
+Package pdftex.def Info: Figure_EN.png  used on input line 34.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+
+Overfull \hbox (42.98396pt too wide) in paragraph at lines 33--35
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
+
+ []
+
+<Figure_SVR.png, id=19, 631.6398pt x 352.6776pt>
+File: Figure_SVR.png Graphic file (type png)
+<use Figure_SVR.png>
+Package pdftex.def Info: Figure_SVR.png  used on input line 37.
+(pdftex.def)             Requested size: 442.14485pt x 246.87262pt.
+<params.png, id=20, 447.6725pt x 37.13875pt>
+File: params.png Graphic file (type png)
+<use params.png>
+Package pdftex.def Info: params.png  used on input line 38.
+(pdftex.def)             Requested size: 447.6714pt x 37.13866pt.
+
+Overfull \hbox (22.60196pt too wide) in paragraph at lines 36--39
+[] 
+ []
+
+
+Overfull \hbox (28.12851pt too wide) in paragraph at lines 36--39
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
+
+ []
+
+[1
+
+{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Figure_EN.png
+>]
+<Figure_Prophet.png, id=32, 389.455pt x 298.11375pt>
 File: Figure_Prophet.png Graphic file (type png)
 <use Figure_Prophet.png>
-Package pdftex.def Info: Figure_Prophet.png  used on input line 35.
+Package pdftex.def Info: Figure_Prophet.png  used on input line 41.
 (pdftex.def)             Requested size: 389.45404pt x 298.11302pt.
- [1
 
-{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Figure_Prophe
-t.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
+
+ []
+
+[2 <./Figure_SVR.png> <./params.png> <./Figure_Prophet.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 57.
+ [3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 57.
 
 (./Rapport_01-21.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 57.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 57.
 Package rerunfilecheck Info: File `Rapport_01-21.out' has not changed.
 (rerunfilecheck)             Checksum: 15B7486B6F56C18166357B1885F615BC;180.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
  ) 
 Here is how much of TeX's memory you used:
- 8981 strings out of 480471
- 141441 string characters out of 5903300
- 456866 words of memory out of 5000000
- 24834 multiletter control sequences out of 15000+600000
+ 9003 strings out of 480471
+ 141763 string characters out of 5903300
+ 455866 words of memory out of 5000000
+ 24855 multiletter control sequences out of 15000+600000
  564211 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,42p,251b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,6n,42p,251b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2020/tex
 mf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2020/texmf-dist/fonts/type
 1/public/lm/lmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr12.p
 fb><c:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texlive/2020
 /texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Rapport_01-21.pdf (2 pages, 142707 bytes).
+Output written on Rapport_01-21.pdf (3 pages, 243089 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 11294 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 68 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
+ 11309 words of extra memory for PDF output out of 12000 (max. 10000000)
 
