@@ -6,10 +6,13 @@
 \usepackage{lmodern}
 \usepackage{microtype}
 
+\usepackage{graphicx}
+\graphicspath{ {./} }
 \usepackage{hyperref}
 \usepackage[margin=1in]{geometry} %Change la marge
 \usepackage{xurl}
 
+\date{}
 \title{TIPE : Mis à jour du projet et avancées}
 \author{DE CARVALHO Enzo et ALEXANDRINE Pedro}
 
@@ -22,4 +25,26 @@
 \section{Résultats et avancées actuelles}
 	Nous avons alors, dans un premier lieu réalisé différentes regressions
 	linéaire à l'aide du package \texttt{sklearn} en python proposant déjà
+	quelques régresseurs linéaire classiques, ainsi qu'une prédiction
+	faite avec le modèle Prophet.
+	Toutes les prédictions sont faîtes sur la base de données :
+	\url{https://github.com/opencovid19-fr/data}
+	\begin{itemize}
+		\item Modèle Prophet (prédit ici les données entre le 06/12/20
+		 et 29/12/20)\\
+		\includegraphics[scale=1]{Figure_Prophet}
+	\end{itemize}
+
+\section{Overture possible}
+	La suite logique dans notre programme de "expérimentation de
+	regression" serait alors d'aller au délà de la simple régression
+	linéaire.
+	Pour cela, quelques pistes sont envisageable, même si celle ci ne
+	remette pas en question la direction actuelle de notre TIPE.
+	Elles sont :
+	\begin{itemize}
+		\item méthode de Levenberg-Marquardt :\\ 
+		\url{https://fr.wikipedia.org/wiki/Algorithme_de_Levenberg-Marquardt}
+		\item méthode ARMA
+	\end{itemize}
 \end{document}

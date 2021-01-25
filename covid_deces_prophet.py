@@ -44,6 +44,7 @@ future_df = model.make_future_dataframe(periods=d)
 prediction = model.predict(future_df)
 
 ## Plot ##
+#plot = model.plot(prediction)
 pred = prediction[['ds','yhat']]
 
 cdata = cdata.set_index('ds')
@@ -52,7 +53,10 @@ pred = pred[pred['ds'] > date]
 pred = pred.set_index('ds')
 
 date_x = cdata.index
+x = [i for i in date_x if i > date]
 plt.plot(date_x, cdata['y'],label="deces reels")
-plt.plot([i for i in date_x if i > date], pred['yhat'], label = "valeures predites")
+plt.plot(x, pred['yhat'], label = "valeures predites")
+plt.xticks(date_x[::15],  rotation='vertical')
+plt.margins(0.01)
 plt.legend()
 plt.show()
