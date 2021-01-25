@@ -1,4 +1,9 @@
 ##Methode SVR##
+from sys import platform as sys_pf
+if sys_pf == 'darwin':
+    import matplotlib
+    matplotlib.use("TkAgg")
+
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.model_selection import train_test_split  #sklearn c'est pour le machine learning et la on prends de quoi séparer nos données
@@ -6,11 +11,14 @@ from sklearn.pipeline import make_pipeline  #permet de réunir la normalisation 
 from sklearn.preprocessing import StandardScaler  #permet de normaliser les données pour que ça fonctionne mieu
 from sklearn.linear_model import ElasticNet #l'algorithme qu'on utilise
 from sklearn.svm import SVR
+from sklearn.linear_model import Lasso
 from sklearn.model_selection import GridSearchCV
 
 ##############################################################################
-svr = SVR(C = 8000)
-params = {'svr__C' : [i*100 for i in range(1,1000,10)]}
+#svr = SVR(C = 8000)
+params = {#'lasso__alpha' : [i/100 for i in range(10,25)]
+    'svr__degree': [0],
+    'svr__C': [600000]}
 ##########################Traitement de données################################
 cdata = pd.read_csv('covid_numbers.csv',index_col='date',parse_dates=True)
 cdata = cdata[cdata['granularite']=='pays']
@@ -25,7 +33,7 @@ print(cdata.count())
 cdata
 
 #########################Rangement de données##################################
-date = '2020-10-25'
+date = '2020-11-01'
 y = cdata[:date]
 X = pd.to_datetime(y.index)
 
@@ -36,7 +44,7 @@ X = X.values.reshape(size,1)
 
 X_train, y_train = X, y
 
-model = make_pipeline(StandardScaler(), svr)  #ça sera ça notre algorithme
+model = make_pipeline(StandardScaler(),SVR())  #ça sera ça notre algorithme
 grid = GridSearchCV(model,param_grid=params)
 
 grid.fit(X_train, y_train)

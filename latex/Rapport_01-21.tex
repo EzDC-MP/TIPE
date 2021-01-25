@@ -5,6 +5,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subcaption}
 
 \usepackage{hyperref}
 \usepackage[margin=1in]{geometry} %Change la marge
@@ -22,4 +24,30 @@
 \section{Résultats et avancées actuelles}
 	Nous avons alors, dans un premier lieu réalisé différentes regressions
 	linéaire à l'aide du package \texttt{sklearn} en python proposant déjà
+	
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.5\linewidth}
+    \includegraphics[width=\linewidth]{deces_covid_machinelearning1.png}
+   \includegraphics[width=\linewidth]{params1.png}
+    \caption{premier test SVR et paramètre }
+     \end{subfigure}
+  \begin{subfigure}[b]{0.5\linewidth}
+    \includegraphics[width=\linewidth]{deces_covid_machinelearning1.png}
+   \includegraphics[width=\linewidth]{params1.png}
+    \caption{premier test SVR et paramètre }
+  \end{subfigure}
+  \caption{The same cup of coffee. Two times.}
+  \label{fig:coffee}
+\end{figure}
+
+
+
+
+
+
+
+
+	
 \end{document}
