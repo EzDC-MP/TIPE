@@ -17,8 +17,10 @@ from sklearn.model_selection import GridSearchCV
 ##############################################################################
 #svr = SVR(C = 8000)
 params = {#'lasso__alpha' : [i/100 for i in range(10,25)]
-    'svr__degree': [0],
-    'svr__C': [600000]}
+    #'svr__degree': [0],
+    #'svr__C': [600000]
+    'elasticnet__alpha' : [i/100 for i in range(10,25)],
+    'elasticnet__l1_ratio' : [0.5,0.8,0.9]}
 ##########################Traitement de données################################
 cdata = pd.read_csv('covid_numbers.csv',index_col='date',parse_dates=True)
 cdata = cdata[cdata['granularite']=='pays']
@@ -44,7 +46,7 @@ X = X.values.reshape(size,1)
 
 X_train, y_train = X, y
 
-model = make_pipeline(StandardScaler(),SVR())  #ça sera ça notre algorithme
+model = make_pipeline(StandardScaler(),ElasticNet())  #ça sera ça notre algorithme
 grid = GridSearchCV(model,param_grid=params)
 
 grid.fit(X_train, y_train)
