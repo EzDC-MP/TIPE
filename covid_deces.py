@@ -7,10 +7,13 @@ from sklearn.preprocessing import StandardScaler  #permet de normaliser les donn
 from sklearn.linear_model import ElasticNet #l'algorithme qu'on utilise
 from sklearn.svm import SVR
 from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import make_scorer
+from sklearn.metrics import mean_squared_error
+from sklearn.model_selection import TimeSeriesSplit
 
 ##############################################################################
-svr = SVR(C = 8000)
-params = {'svr__C' : [i*100 for i in range(1,1000,10)]}
+svr = SVR()
+params = {'svr__C' : [1000000]} #[10**i for i in range(1,8)]}
 ##########################Traitement de données################################
 cdata = pd.read_csv('covid_numbers.csv',index_col='date',parse_dates=True)
 cdata = cdata[cdata['granularite']=='pays']
@@ -25,7 +28,8 @@ print(cdata.count())
 cdata
 
 #########################Rangement de données##################################
-date = '2020-10-25'
+date = '2020-10-29'
+
 y = cdata[:date]
 X = pd.to_datetime(y.index)
 
@@ -37,7 +41,9 @@ X = X.values.reshape(size,1)
 X_train, y_train = X, y
 
 model = make_pipeline(StandardScaler(), svr)  #ça sera ça notre algorithme
-grid = GridSearchCV(model,param_grid=params)
+scorer = make_scorer(mean_squared_error, greater_is_better=False)
+tscv = TimeSeriesSplit(n_splits=10) #Decoupage pour le CV adapté aux series temporelles.
+grid = GridSearchCV(model, params, scorer, cv = tscv )
 
 grid.fit(X_train, y_train)
 
@@ -47,9 +53,9 @@ x_prevu = x_prevu.values.reshape(len(x_prevu),1)
 cdata['deces'].plot(label="deces reels")
 #cdata['cas_confirmes'].plot(label="cas reels")
 plt.plot(x_prevu,grid.predict(x_prevu),label="valeur predites")
+plt.plot(X_train, grid.predict(X_train), label = "valeur predites")
 plt.legend()
 plt.show()
 print(grid.best_params_)
-
 
 ######LE CODE COMPILE#######

@@ -1,0 +1,4 @@
+-Essayer un réseau neuronal en "translatant" vers le passé des données
+(par exemple données de morts)
+genre (on entraine sur [reanimation,deces,mort+7j], et on regarde les infos
+obtenus.
