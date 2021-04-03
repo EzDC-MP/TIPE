@@ -49,7 +49,7 @@ y_result=covid[size:][result]
 y_result = y_result.values.reshape(full_size-size,)
 
 params={
-    'mlpregressor__max_iter': [10000],
+    'mlpregressor__max_iter': [90000],
 }
 
 model=make_pipeline(StandardScaler(),MLPRegressor())
