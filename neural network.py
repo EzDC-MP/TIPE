@@ -9,6 +9,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.pipeline import make_pipeline
 from sklearn.neural_network import MLPRegressor
+from pandas.plotting import register_matplotlib_converters
+register_matplotlib_converters()
+from sklearn.metrics import make_scorer
+from sklearn.metrics import mean_squared_error
+from sklearn.linear_model import RANSACRegressor
+scorer = make_scorer(mean_squared_error, greater_is_better=False)
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import TimeSeriesSplit
 from sklearn.model_selection import GridSearchCV
@@ -24,13 +30,14 @@ covid = pd.read_excel('chiffre_covid_14032021 copie.xlsx',index_col='date',parse
 
 covid = covid[covid['granularite']=='pays']
 
-#print(covid.keys())
+print(covid.keys())
 for i in covid:
-    if not (covid[i].name in ["deces",'cas_confirmes','reanimation','hospitalises']):
+    if not (covid[i].name in ["deces",'cas_confirmes','nouvelles_reanimations','reanimation','hospitalises']):
         covid.drop([i], axis=1, inplace = True)
 
 
 covid = covid.dropna(axis=0)
+print(covid.count())
 timeshift_day(covid['deces'],-7)
 covid=covid[7:]
 
@@ -38,7 +45,7 @@ full_size=covid.count()[0]
 subject=['hospitalises','cas_confirmes','reanimation']
 result=["deces"]
 
-size=320
+size=full_size-30
 
 X = covid[:size][subject]
 y = covid[:size][result]
@@ -49,13 +56,16 @@ y_result=covid[size:][result]
 y_result = y_result.values.reshape(full_size-size,)
 
 params={
-    'mlpregressor__max_iter': [90000],
+    'mlpregressor__max_iter': [1000],
+    'mlpregressor__tol': [0.0001,0.01],
+    'mlpregressor__solver': ['adam','lbfgs', 'sgd' ],
+    'mlpregressor__n_iter_no_change': [10,100,3],
 }
 
 model=make_pipeline(StandardScaler(),MLPRegressor())
 
 
-grid=GridSearchCV(model,param_grid=params,cv=tscv)#,scoring=scorer)
+grid=GridSearchCV(model,param_grid=params,cv=tscv,scoring=scorer)
 
 
 print(model.get_params())
