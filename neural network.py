@@ -26,13 +26,13 @@ def timeshift_day(data,n):
 
 tscv = TimeSeriesSplit(n_splits=5)
 
-covid = pd.read_excel('chiffre_covid_10052021.xlsx',index_col='date',parse_dates=True)#,index_col='date',parse_dates=True)
+covid = pd.read_excel('chiffre_covid_14032021 copie.xlsx',index_col='date',parse_dates=True)#,index_col='date',parse_dates=True)
 
 covid = covid[covid['granularite']=='pays']
 
 print(covid.keys())
 for i in covid:
-    if not (covid[i].name in ["deces",'reanimation','hospitalises']):
+    if not (covid[i].name in ["deces",'cas_confirmes','nouvelles_reanimations','reanimation','hospitalises']):
         covid.drop([i], axis=1, inplace = True)
 
 
@@ -42,11 +42,10 @@ timeshift_day(covid['deces'],-7)
 covid=covid[7:]
 
 full_size=covid.count()[0]
-print(full_size)
-subject=['hospitalises','reanimation']
+subject=['hospitalises','cas_confirmes','reanimation']
 result=["deces"]
-predit_jour=20
-size=full_size-predit_jour
+
+size=full_size-30
 
 X = covid[:size][subject]
 y = covid[:size][result]
@@ -57,9 +56,10 @@ y_result=covid[size:][result]
 y_result = y_result.values.reshape(full_size-size,)
 
 params={
-    'mlpregressor__max_iter': [140000],
-    'mlpregressor__tol': [0.0001],
-    'mlpregressor__n_iter_no_change': [2],
+    'mlpregressor__max_iter': [1000],
+    'mlpregressor__tol': [0.0001,0.01],
+    'mlpregressor__solver': ['adam','lbfgs', 'sgd' ],
+    'mlpregressor__n_iter_no_change': [10,100,3],
 }
 
 model=make_pipeline(StandardScaler(),MLPRegressor())
@@ -82,6 +82,6 @@ covid=covid[:full_size-7]
 
 plt.figure()
 plt.plot(covid.index,covid['deces'])
-plt.plot(covid.index[size-7:],grid.predict(covid[size-7:][subject]))
-plt.plot(covid.index[:size-7],grid.predict(covid[:size-7][subject]))
+plt.plot(covid.index[size-7:],grid.predict(X_result))
+plt.plot(covid.index[:size],grid.predict(X))
 plt.show()
