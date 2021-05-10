@@ -1,0 +1,12 @@
+\begin{thebibliography}{1}
+
+\bibitem{fbprophet}
+Quickstart | python api.
+\newblock \url{https://facebook.github.io/prophet/docs/quick_start.html}, 2021.
+
+\bibitem{Cvdfr}
+les contributeurs du~dépot. OpenCOVID19~France.
+\newblock Données nationales concernant l'épidémie de covid19.
+\newblock \url{https://github.com/opencovid19-fr/data}, 2020.
+
+\end{thebibliography}

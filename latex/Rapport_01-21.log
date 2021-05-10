@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.13)  25 JAN 2021 18:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.13)  10 MAY 2021 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -534,8 +534,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 57.
 (./Rapport_01-21.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 57.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 57.
-Package rerunfilecheck Info: File `Rapport_01-21.out' has not changed.
-(rerunfilecheck)             Checksum: 15B7486B6F56C18166357B1885F615BC;180.
+
+
+Package rerunfilecheck Warning: File `Rapport_01-21.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Rapport_01-21.out':
+(rerunfilecheck)             Before: 9D89E3919AF140AAF64F0C781FE1733B;183
+(rerunfilecheck)             After:  15B7486B6F56C18166357B1885F615BC;180.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
  ) 
 Here is how much of TeX's memory you used:
