@@ -36,7 +36,7 @@ for i in covid:
                               'patients_hospitalises','total_cas_confirmes']):
         covid.drop([i], axis=1, inplace = True)
 
-jour_decale=15
+jour_decale=10
 covid = covid.dropna(axis=0)
 print(covid.count())
 timeshift_day(covid["total_deces_hopital"],-jour_decale)
@@ -47,7 +47,7 @@ print(full_size)
 subject=['patients_reanimation',
          'patients_hospitalises','total_cas_confirmes']
 result=["total_deces_hopital"]
-predit_jour=30
+predit_jour=20
 size=full_size-predit_jour
 
 X = covid[:size][subject]
@@ -60,14 +60,14 @@ y_result = y_result.values.reshape(full_size-size,)
 
 params={
     'mlpregressor__max_iter': [90000],
-    'mlpregressor__tol': [0.0001],
-    'mlpregressor__n_iter_no_change': [3],
+    'mlpregressor__tol': [0.00001],
+    'mlpregressor__n_iter_no_change': [2],
 }
 
 model=make_pipeline(StandardScaler(),MLPRegressor())
 
 
-grid=GridSearchCV(model,param_grid=params,cv=tscv)
+grid=GridSearchCV(model,param_grid=params,cv=tscv,scoring=scorer)
 
 
 print(model.get_params())
