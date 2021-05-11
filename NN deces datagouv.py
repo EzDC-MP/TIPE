@@ -47,7 +47,7 @@ print(full_size)
 subject=['patients_reanimation',
          'patients_hospitalises','total_cas_confirmes']
 result=["total_deces_hopital"]
-predit_jour=180
+predit_jour=30
 size=full_size-predit_jour
 
 X = covid[:size][subject]
@@ -59,9 +59,9 @@ y_result=covid[size:][result]
 y_result = y_result.values.reshape(full_size-size,)
 
 params={
-    'mlpregressor__max_iter': [100000],
-    'mlpregressor__tol': [0.001],
-    'mlpregressor__n_iter_no_change': [4],
+    'mlpregressor__max_iter': [90000],
+    'mlpregressor__tol': [0.0001],
+    'mlpregressor__n_iter_no_change': [3],
 }
 
 model=make_pipeline(StandardScaler(),MLPRegressor())
