@@ -26,7 +26,7 @@ def timeshift_day(data,n):
 
 tscv = TimeSeriesSplit(n_splits=5)
 
-covid = pd.read_csv('synthese-fra 2.csv',index_col='date',parse_dates=True)#,index_col='date',parse_dates=True)
+covid = pd.read_csv('synthese-fra.csv',index_col='date',parse_dates=True)#,index_col='date',parse_dates=True)
 
 
 
@@ -39,7 +39,7 @@ for i in covid:
 
 covid = covid.dropna(axis=0)
 print(covid.count())
-timeshift_day(covid['deces'],-7)
+timeshift_day(covid["total_deces_hopital"],-7)
 
 
 full_size=covid.count()[0]
@@ -59,9 +59,9 @@ y_result=covid[size:][result]
 y_result = y_result.values.reshape(full_size-size,)
 
 params={
-    'mlpregressor__max_iter': [100],
-    'mlpregressor__tol': [0.0001],
-    'mlpregressor__n_iter_no_change': [2],
+    'mlpregressor__max_iter': [90000],
+    'mlpregressor__tol': [0.00001],
+    'mlpregressor__n_iter_no_change': [1,2,5,10],
 }
 
 model=make_pipeline(StandardScaler(),MLPRegressor())
