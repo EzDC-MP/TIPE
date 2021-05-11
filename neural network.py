@@ -32,7 +32,7 @@ covid = covid[covid['granularite']=='pays']
 
 print(covid.keys())
 for i in covid:
-    if not (covid[i].name in ["deces",'reanimation','hospitalises']):
+    if not (covid[i].name in ["deces",'reanimation','hospitalises','nouvelles_hospitalisations']):
         covid.drop([i], axis=1, inplace = True)
 
 
@@ -43,7 +43,7 @@ covid=covid[7:]
 
 full_size=covid.count()[0]
 print(full_size)
-subject=['hospitalises','reanimation']
+subject=['hospitalises','reanimation','nouvelles_hospitalisations']
 result=["deces"]
 predit_jour=20
 size=full_size-predit_jour
@@ -57,7 +57,7 @@ y_result=covid[size:][result]
 y_result = y_result.values.reshape(full_size-size,)
 
 params={
-    'mlpregressor__max_iter': [140000],
+    'mlpregressor__max_iter': [90000],
     'mlpregressor__tol': [0.0001],
     'mlpregressor__n_iter_no_change': [2],
 }
