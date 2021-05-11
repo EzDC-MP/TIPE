@@ -26,25 +26,27 @@ def timeshift_day(data,n):
 
 tscv = TimeSeriesSplit(n_splits=5)
 
-covid = pd.read_excel('synthese-fra 2.csv',index_col='date',parse_dates=True)#,index_col='date',parse_dates=True)
+covid = pd.read_csv('synthese-fra 2.csv',index_col='date',parse_dates=True)#,index_col='date',parse_dates=True)
 
-covid = covid[covid['granularite']=='pays']
+
 
 print(covid.keys())
 for i in covid:
-    if not (covid[i].name in ["deces",'reanimation','hospitalises','nouvelles_hospitalisations']):
+    if not (covid[i].name in ["total_deces_hopital",'patients_reanimation',
+                              'patients_hospitalises','total_cas_confirmes']):
         covid.drop([i], axis=1, inplace = True)
 
 
 covid = covid.dropna(axis=0)
 print(covid.count())
 timeshift_day(covid['deces'],-7)
-covid=covid[7:]
+
 
 full_size=covid.count()[0]
 print(full_size)
-subject=['hospitalises','reanimation','nouvelles_hospitalisations']
-result=["deces"]
+subject=['patients_reanimation',
+         'patients_hospitalises','total_cas_confirmes']
+result=["total_deces_hopital"]
 predit_jour=20
 size=full_size-predit_jour
 
@@ -57,7 +59,7 @@ y_result=covid[size:][result]
 y_result = y_result.values.reshape(full_size-size,)
 
 params={
-    'mlpregressor__max_iter': [90000],
+    'mlpregressor__max_iter': [100],
     'mlpregressor__tol': [0.0001],
     'mlpregressor__n_iter_no_change': [2],
 }
@@ -76,12 +78,12 @@ print(grid.best_params_)
 
 
 
-timeshift_day(covid['deces'],7)
+timeshift_day(covid["total_deces_hopital"],7)
 covid=covid[:full_size-7]
 
 
 plt.figure()
-plt.plot(covid.index,covid['deces'])
+plt.plot(covid.index,covid["total_deces_hopital"])
 plt.plot(covid.index[size-7:],grid.predict(covid[size-7:][subject]))
 plt.plot(covid.index[:size-7],grid.predict(covid[:size-7][subject]))
 plt.show()
