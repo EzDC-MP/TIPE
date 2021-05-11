@@ -61,7 +61,7 @@ y_result = y_result.values.reshape(full_size-size,)
 params={
     'mlpregressor__max_iter': [90000],
     'mlpregressor__tol': [0.00001],
-    'mlpregressor__n_iter_no_change': [1,2,5,10],
+    'mlpregressor__n_iter_no_change': [2],
 }
 
 model=make_pipeline(StandardScaler(),MLPRegressor())
@@ -79,7 +79,7 @@ print(grid.best_params_)
 
 
 timeshift_day(covid["total_deces_hopital"],7)
-covid=covid[:full_size-7]
+covid=covid[7:]
 
 
 plt.figure()
