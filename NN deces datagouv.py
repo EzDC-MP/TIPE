@@ -47,7 +47,7 @@ print(full_size)
 subject=['patients_reanimation',
          'patients_hospitalises','total_cas_confirmes']
 result=["total_deces_hopital"]
-predit_jour=20
+predit_jour=120
 size=full_size-predit_jour
 
 X = covid[:size][subject]
@@ -59,7 +59,7 @@ y_result=covid[size:][result]
 y_result = y_result.values.reshape(full_size-size,)
 
 params={
-    'mlpregressor__max_iter': [90000],
+    'mlpregressor__max_iter': [100000],
     'mlpregressor__tol': [0.00001],
     'mlpregressor__n_iter_no_change': [2],
 }
@@ -67,7 +67,7 @@ params={
 model=make_pipeline(StandardScaler(),MLPRegressor())
 
 
-grid=GridSearchCV(model,param_grid=params,cv=tscv,scoring=scorer)
+grid=GridSearchCV(model,param_grid=params,cv=tscv)
 
 
 print(model.get_params())
@@ -75,7 +75,6 @@ grid.fit(X,y)
 print(grid.score(X,y))
 print(grid.score(X_result,y_result))
 print(grid.best_params_)
-
 
 
 timeshift_day(covid["total_deces_hopital"],7)
