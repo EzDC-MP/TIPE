@@ -16,24 +16,24 @@ from sklearn.model_selection import TimeSeriesSplit
 tscv = TimeSeriesSplit(n_splits=15) #Decoupage pour le CV adapté aux series temporelles.
 scorer = make_scorer(mean_squared_error, greater_is_better=False) #https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error
 model = make_pipeline(StandardScaler(), RegressorChain(SVR(), order=[2,1,0]))
-params = {'regressorchain__base_estimator__C': [10**i for i in range(0,8)],
+params = {'regressorchain__base_estimator__C': [10**i for i in range(2,8)],
           'regressorchain__base_estimator__epsilon': [0.001,0.1,0.01],
-          'regressorchain__base_estimator__gamma' : ['scale', 'auto'],
           'regressorchain__base_estimator__kernel': ['rbf']}
+          #'regressorchain__base_estimator__gamma' : ['scale', 'auto']}
 grid = GridSearchCV(model, params, cv = tscv, verbose = 1)
 
 ##############################################################################
-#cdata = pd.read_csv('covid_numbers.csv',index_col='date',parse_dates=True) nouvelle base de données màj (10-05-21)
-cdata = pd.read_csv('covid_numbers-10-05-21.csv',index_col='date',parse_dates=True)
+cdata = pd.read_csv('covid_numbers.csv',index_col='date',parse_dates=True) #nouvelle base de données màj (10-05-21)
+#cdata = pd.read_csv('covid_numbers-10-05-21.csv',index_col='date',parse_dates=True)
 cdata = cdata[cdata['granularite']=='pays']
 for i in cdata:
-    if not (cdata[i].name in ["deces", "reanimation", "hospitalises"]):
+    if not (cdata[i].name in ["deces", "reanimation", "cas_confirmes"]):
         cdata.drop([i], axis=1, inplace = True)
         
 cdata = cdata.dropna(axis=0)
 
 ##############################################################################
-date = '2020-04-30'
+date = '2020-11-25'
 
 Y = cdata['2020-03-01':date]
 x = pd.to_datetime(Y.index)
@@ -47,7 +47,7 @@ x_futur = x_futur.values.reshape(len(x_futur),1)
 
 cdata['deces'].plot(label="deces reels")
 cdata['reanimation'].plot(label="reanimation reels")
-cdata['hospitalises'].plot(label="hospitalisation")
+cdata['cas_confirmes'].plot(label="cas confirmés réel")
 
 plt.yscale('log')
 plt.legend()

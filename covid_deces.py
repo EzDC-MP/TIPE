@@ -10,10 +10,11 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import make_scorer
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import TimeSeriesSplit
+from dist_moy import dist_moy
 
 ##############################################################################
 svr = SVR()
-params = {'svr__C' : [1000000]} #[10**i for i in range(1,8)]}
+params = {'svr__C' : [100000]}#[10**i for i in range(1,8)]}
 ##########################Traitement de données################################
 cdata = pd.read_csv('covid_numbers.csv',index_col='date',parse_dates=True)
 cdata = cdata[cdata['granularite']=='pays']
@@ -28,7 +29,7 @@ print(cdata.count())
 cdata
 
 #########################Rangement de données##################################
-date = '2020-10-29'
+date = '2020-10-30'
 
 y = cdata[:date]
 X = pd.to_datetime(y.index)

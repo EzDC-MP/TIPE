@@ -34,8 +34,8 @@ clean_dates(cdata)
 model = Prophet()
 
 ## Prediction ##
-date = '2020-12-06' ##max 2020-12-29
-d = 23 #nombre de jour entre la date donnée et la date max de cdata
+date = '2020-11-25' ##max 2020-12-29
+d = 34 #nombre de jour entre la date donnée et la date max de cdata
 cdata_less = cdata[cdata['ds'] <= date]
 model.fit(cdata_less)
 
