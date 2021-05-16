@@ -32,13 +32,31 @@
 		\includegraphics[scale=0.65]{super_schema}
 	\end{figure}
 \end{frame}
-		
+
 \begin{frame}
-	\frametitle{Regression linéaire}
-	ElasticNet ne fait que des droites, c'est pas intéressant.
-	\begin{figure}[b]
-		\includegraphics[scale=0.4]{EN}
+	\frametitle{Principe de l'apprentissage supervisée}
+	La création du modèle passe par l'optimisation d'une fonction d'objectif, où les paramètres à optimiser sont ceux du modèles.
+	Exemple avec une regression linéaire dont le modèle est de la forme :
+	\begin{figure}[h]
 		\centering
+		\includegraphics[scale=0.7]{f_lineair}
+		\caption{$x$ les données, $w$ les paramètres}
+	\end{figure}
+	\alert{N.B : refaire la figure (celle-ci est volée du manuel scikit)}
+\end{frame}
+
+\begin{frame}
+	\frametitle{ElasticNet}
+	La fonction d'objectif d'ElasticNet minimise : (à l'aide d'un algorithme itératif "Coordinate Descent" (trad?))
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{fonction_dobj}
+		\caption{$\alpha$ et $\rho$ sont des hyperparamètres définissant le modèle}
+	\end{figure}
+	\begin{figure}[b]
+		\includegraphics[scale=0.2]{EN}
+		\centering
+		\caption{résultats peu intéressant dans notre cas..}
 	\end{figure}
 \end{frame}
 
@@ -128,7 +146,17 @@
 \subsection{Réseau neuronal}
 \begin{frame}
 	\frametitle{Explications}
-	Là on explique savamment l'art du réseau neuronal
+	\begin{figure}[t]
+		\centering
+		\begin{minipage}{0.5\textwidth}
+			\includegraphics[scale=0.15]{nn_sk}
+		\end{minipage}
+		\begin{minipage}{0.3\textwidth}
+			\tiny{Basé sur le fonctionnement du cerveau. Donne un jeu de donné successivement interprétées par un jeu de hidden layers. Un hidden layer est un jeu de neurones chacun interprétant et transformant les objets donnés pour décrypter le jeu de donnés précédents. À la fin on aboutit au résultat trouvé par la machine. Le but de l'entrainement ici est l'ajustement de chaque hidden layer et de ces neurones pour tomber sur des prédictions les plus proches possible de la réalité (jsp en détail). $Max_iter$ est alors le nombre de fois que le modèle va s'entrainer au maximum si il n’a pas réussi à aboutir à un résultat satisfaisant la tolérance tol donnée.}
+		\end{minipage}
+	\\
+	\alert{N.B ; pire diapo}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -152,6 +180,12 @@
 		\includegraphics[scale=0.6]{NN_3}
 		\caption{échec du modèle sans la courbe des cas confirmés}
 	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Notes}
+	\alert{N.B les diapos sont trop verbeux; il faut encore un effort de concision, ou alors elles doivent être expliquées à l'oral}\\
+	\alert{N.B sourcer les images}
 \end{frame}
 
 \end{document}
