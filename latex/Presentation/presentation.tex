@@ -23,7 +23,16 @@
 \end{frame}
 
 \section{Première approche : simple regression}
-\subsection{Regression linéaire (ElasticNet)}
+\subsection{Principe}
+\begin{frame}
+	\frametitle{Principe de l'apprentissage supervisée}
+	Donné une fonction $f : X \rightarrow y$ ($X$ et $y$ des données corrélées), un algoritmhe d'apprentissage supervisée cherche alors à obtenir un modèle $g : X \rightarrow y$ qui estime $f$ à partir d'une d'une partie $Y \subset f(X)$ déjà connue de l'algoritme.
+	\begin{figure}[b]
+		\centering
+		\includegraphics[scale=0.65]{super_schema}
+	\end{figure}
+\end{frame}
+		
 \begin{frame}
 	\frametitle{Regression linéaire}
 	ElasticNet ne fait que des droites, c'est pas intéressant.
@@ -44,6 +53,17 @@
 	\end{figure}
 \end{frame}
 
+\subsection{Résultats avec SVR}
+\begin{frame}
+	\frametitle{SVR ; premier résultat}
+	Approche à l'aide du modèle SVR (avec le noyau 'rbf') (Support Vector Regressor)
+	\begin{figure}[tc]
+		\includegraphics[scale=0.2]{SVR_premierdecoup}
+		\centering
+		\caption{Premier résultat avec SVR avec une "mauvaise stratégie" de découpage pour former un modèle prédisant une série temporelle}
+	\end{figure}
+\end{frame}
+
 \subsubsection{Découpages adaptés}
 \begin{frame}
 	\frametitle{Découpage adapté pour la CV}
@@ -61,16 +81,6 @@
 		\end{figure}
 \end{frame}
 
-\subsection{Résultats avec SVR}
-\begin{frame}
-	\frametitle{SVR ; premier résultat}
-	Approche à l'aide du modèle SVR (avec le noyau 'rbf') (Support Vector Regressor)
-	\begin{figure}[tc]
-		\includegraphics[scale=0.2]{SVR_premierdecoup}
-		\centering
-		\caption{Premier résultat avec SVR avec une "mauvaise stratégie" de découpage pour former un modèle prédisant une série temporelle}
-	\end{figure}
-\end{frame}
 \begin{frame}
 	\frametitle{SVR}
 	\begin{figure}[t]
@@ -83,6 +93,7 @@
 		\end{minipage}
 	\caption{à gauche la prediction avant le pt d'inflexion, à droite, après.}
 	\end{figure}
+	$\Rightarrow$ Le modèle n'arrive pas à "suivre" sans le point d'inflexion.
 \end{frame}
 \begin{frame}
 	\frametitle{fbprophet}
