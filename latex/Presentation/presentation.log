@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.13)  14 MAY 2021 12:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.13)  16 MAY 2021 15:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -838,7 +838,7 @@ tex.map}
 ] (./presentation.toc) [2
 
 ]
-<figures/EN.png, id=160, 547.04375pt x 489.83pt>
+<figures/EN.png, id=168, 547.04375pt x 489.83pt>
 File: figures/EN.png Graphic file (type png)
 <use figures/EN.png>
 Package pdftex.def Info: figures/EN.png  used on input line 34.
@@ -846,113 +846,140 @@ Package pdftex.def Info: figures/EN.png  used on input line 34.
  [3
 
  <./figures/EN.png>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
+<figures/gscv.png, id=205, 888.31876pt x 615.29875pt>
+File: figures/gscv.png Graphic file (type png)
+<use figures/gscv.png>
+Package pdftex.def Info: figures/gscv.png  used on input line 45.
+(pdftex.def)             Requested size: 177.6606pt x 123.05756pt.
+ [4
 
+ <./figures/gscv.png>]
+<figures/kfold.png, id=245, 726.715pt x 285.065pt>
+File: figures/kfold.png Graphic file (type png)
+<use figures/kfold.png>
+Package pdftex.def Info: figures/kfold.png  used on input line 62.
+(pdftex.def)             Requested size: 181.6783pt x 71.26607pt.
+
+Overfull \hbox (58.76424pt too wide) in paragraph at lines 62--62
+[][] 
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
 
 (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
 
 
 (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 44.
+ut line 62.
 
 (c:/texlive/2020/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-[4
+<figures/tscv.png, id=246, 679.53876pt x 264.99pt>
+File: figures/tscv.png Graphic file (type png)
+<use figures/tscv.png>
+Package pdftex.def Info: figures/tscv.png  used on input line 62.
+(pdftex.def)             Requested size: 169.88428pt x 66.24733pt.
 
-]
-<figures/SVR_premierdecoup.png, id=237, 1216.545pt x 775.89874pt>
-File: figures/SVR_premierdecoup.png Graphic file (type png)
-<use figures/SVR_premierdecoup.png>
-Package pdftex.def Info: figures/SVR_premierdecoup.png  used on input line 55.
-(pdftex.def)             Requested size: 243.30469pt x 155.177pt.
-
-Overfull \vbox (6.98306pt too high) detected at line 55
+Overfull \hbox (46.97021pt too wide) in paragraph at lines 62--62
+[][] 
  []
 
 [5
 
+ <./figures/kfold.png> <./figures/tscv.png>]
+<figures/SVR_premierdecoup.png, id=287, 1216.545pt x 775.89874pt>
+File: figures/SVR_premierdecoup.png Graphic file (type png)
+<use figures/SVR_premierdecoup.png>
+Package pdftex.def Info: figures/SVR_premierdecoup.png  used on input line 73.
+(pdftex.def)             Requested size: 243.30469pt x 155.177pt.
+
+Overfull \vbox (6.98306pt too high) detected at line 73
+ []
+
+[6
+
  <./figures/SVR_premierdecoup.png>]
-<figures/SVR_avant_pt_dinflexion.png, id=275, 491.8375pt x 407.5225pt>
+<figures/SVR_avant_pt_dinflexion.png, id=324, 491.8375pt x 407.5225pt>
 File: figures/SVR_avant_pt_dinflexion.png Graphic file (type png)
 <use figures/SVR_avant_pt_dinflexion.png>
 Package pdftex.def Info: figures/SVR_avant_pt_dinflexion.png  used on input lin
-e 68.
+e 86.
 (pdftex.def)             Requested size: 122.95906pt x 101.88037pt.
-<figures/SVR_apres_pt_dinflexion.png, id=276, 493.845pt x 421.575pt>
+<figures/SVR_apres_pt_dinflexion.png, id=325, 493.845pt x 421.575pt>
 File: figures/SVR_apres_pt_dinflexion.png Graphic file (type png)
 <use figures/SVR_apres_pt_dinflexion.png>
 Package pdftex.def Info: figures/SVR_apres_pt_dinflexion.png  used on input lin
-e 68.
+e 86.
 (pdftex.def)             Requested size: 123.46094pt x 105.39348pt.
- [6
+ [7
 
  <./figures/SVR_avant_pt_dinflexion.png> <./figures/SVR_apres_pt_dinflexion.png
 >]
-<figures/fbprophet_avant_pt_dinflexion.png, id=312, 683.55376pt x 431.6125pt>
+<figures/fbprophet_avant_pt_dinflexion.png, id=363, 683.55376pt x 431.6125pt>
 File: figures/fbprophet_avant_pt_dinflexion.png Graphic file (type png)
 <use figures/fbprophet_avant_pt_dinflexion.png>
 Package pdftex.def Info: figures/fbprophet_avant_pt_dinflexion.png  used on inp
-ut line 84.
+ut line 102.
 (pdftex.def)             Requested size: 88.8651pt x 56.11159pt.
-<figures/fbprophet_mid_pt_dinflexion.png, id=313, 618.31pt x 444.66125pt>
+<figures/fbprophet_mid_pt_dinflexion.png, id=364, 618.31pt x 444.66125pt>
 File: figures/fbprophet_mid_pt_dinflexion.png Graphic file (type png)
 <use figures/fbprophet_mid_pt_dinflexion.png>
 Package pdftex.def Info: figures/fbprophet_mid_pt_dinflexion.png  used on input
- line 84.
+ line 102.
 (pdftex.def)             Requested size: 80.38312pt x 57.80798pt.
-<figures/fbprophet_apres_pt_dinflexion.png, id=314, 642.4pt x 441.65pt>
+<figures/fbprophet_apres_pt_dinflexion.png, id=365, 642.4pt x 441.65pt>
 File: figures/fbprophet_apres_pt_dinflexion.png Graphic file (type png)
 <use figures/fbprophet_apres_pt_dinflexion.png>
 Package pdftex.def Info: figures/fbprophet_apres_pt_dinflexion.png  used on inp
-ut line 84.
+ut line 102.
 (pdftex.def)             Requested size: 83.51492pt x 57.4165pt.
- [7
+ [8
 
  <./figures/fbprophet_avant_pt_dinflexion.png> <./figures/fbprophet_mid_pt_dinf
 lexion.png> <./figures/fbprophet_apres_pt_dinflexion.png>]
-<figures/mulitregr_epic_fail.png, id=352, 455.301pt x 353.52075pt>
+<figures/mulitregr_epic_fail.png, id=404, 455.301pt x 353.52075pt>
 File: figures/mulitregr_epic_fail.png Graphic file (type png)
 <use figures/mulitregr_epic_fail.png>
-Package pdftex.def Info: figures/mulitregr_epic_fail.png  used on input line 97
-.
+Package pdftex.def Info: figures/mulitregr_epic_fail.png  used on input line 11
+5.
 (pdftex.def)             Requested size: 136.59134pt x 106.05704pt.
- [8
+ [9
 
- <./figures/mulitregr_epic_fail.png>] [9
+ <./figures/mulitregr_epic_fail.png>] [10
 
 ]
-<figures/NN_1.png, id=431, 489.62926pt x 278.2395pt>
+<figures/NN_1.png, id=482, 489.62926pt x 278.2395pt>
 File: figures/NN_1.png Graphic file (type png)
 <use figures/NN_1.png>
-Package pdftex.def Info: figures/NN_1.png  used on input line 118.
+Package pdftex.def Info: figures/NN_1.png  used on input line 136.
 (pdftex.def)             Requested size: 153.64493pt x 87.3105pt.
-<figures/NN_2.png, id=432, 497.4585pt x 314.3745pt>
+<figures/NN_2.png, id=483, 497.4585pt x 314.3745pt>
 File: figures/NN_2.png Graphic file (type png)
 <use figures/NN_2.png>
-Package pdftex.def Info: figures/NN_2.png  used on input line 118.
+Package pdftex.def Info: figures/NN_2.png  used on input line 136.
 (pdftex.def)             Requested size: 153.64493pt x 97.0953pt.
- [10
+ [11
 
  <./figures/NN_1.png> <./figures/NN_2.png>]
-<figures/NN_3.png, id=470, 540.8205pt x 221.02576pt>
+<figures/NN_3.png, id=522, 540.8205pt x 221.02576pt>
 File: figures/NN_3.png Graphic file (type png)
 <use figures/NN_3.png>
-Package pdftex.def Info: figures/NN_3.png  used on input line 126.
+Package pdftex.def Info: figures/NN_3.png  used on input line 144.
 (pdftex.def)             Requested size: 324.4948pt x 132.61647pt.
 
-Overfull \hbox (17.20493pt too wide) in paragraph at lines 126--126
+Overfull \hbox (17.20493pt too wide) in paragraph at lines 144--144
  [] 
  []
 
-[11
+[12
 
  <./figures/NN_3.png>]
 \tf@nav=\write6
@@ -964,54 +991,32 @@ Overfull \hbox (17.20493pt too wide) in paragraph at lines 126--126
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
  (./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
-
-
-Package rerunfilecheck Warning: File `presentation.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `presentation.out':
-(rerunfilecheck)             Before: 6D16C25E28B4C73A29AF120B742C56E2;539
-(rerunfilecheck)             After:  48B2E407A2CBEA2808D726A4D9ECE22D;539.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
+Package rerunfilecheck Info: File `presentation.out' has not changed.
+(rerunfilecheck)             Checksum: 261BC35528100F7DF3F8CD2CDCD1D635;540.
  ) 
 Here is how much of TeX's memory you used:
- 18194 strings out of 480471
- 349483 string characters out of 5903300
- 599712 words of memory out of 5000000
- 33733 multiletter control sequences out of 15000+600000
- 541593 words of font info for 58 fonts, out of 8000000 for 9000
+ 18225 strings out of 480471
+ 350095 string characters out of 5903300
+ 600775 words of memory out of 5000000
+ 33765 multiletter control sequences out of 15000+600000
+ 541563 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,20n,67p,799b,761s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Outline0.2.2.8} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.2.1.7} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.1.3.4} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.1.2.3} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.1.1.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2020/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2020/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmssi10.pfb><c:/texlive/2020/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmtt8.pfb>
-Output written on presentation.pdf (11 pages, 758816 bytes).
+ 58i,20n,72p,799b,761s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2020/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmss9.pfb><c:/texlive/2020/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmssi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmtt8.pfb>
+Output written on presentation.pdf (12 pages, 836608 bytes).
 PDF statistics:
- 539 PDF objects out of 1000 (max. 8388607)
- 475 compressed objects within 5 object streams
- 35 named destinations out of 1000 (max. 500000)
- 202 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 591 PDF objects out of 1000 (max. 8388607)
+ 518 compressed objects within 6 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 217 words of extra memory for PDF output out of 10000 (max. 10000000)
 

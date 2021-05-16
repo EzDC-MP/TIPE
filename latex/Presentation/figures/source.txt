@@ -1,0 +1,3 @@
+cv grid : https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation
+kfold : https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation
+timesplitseries : https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation

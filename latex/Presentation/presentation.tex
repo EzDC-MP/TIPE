@@ -34,13 +34,31 @@
 \end{frame}
 
 \subsection{Optimisation d'hyperparamètres et stratégies}
+\subsubsection{Cross-validation}
 \begin{frame}
-	\frametitle{Hyperparamètre}
-	là on explique en quoi consiste l'optimisation d'hyperparamètres (crossvalidation)
-	Et pourquoi on est passer du découpage de base que propose GridSearchCV (k-fold) au découpage tscv (time-split series)
-	\\
-	\alert{lien utile : }
-	\url{https://scikit-learn.org/stable/auto_examples/model_selection/plot_cv_indices.html########sphx-glr-auto-examples-model-selection-plot-cv-indices-py}
+	\frametitle{Recherche du meilleur paramètre}
+	On recherche la meilleur combinaison des paramètres donnés en évaluant successivement chaque modèle pour chacune des combinaisons possibles selon une stratégie de "cross-validation" :
+	\begin{figure}[b]
+		\centering
+		\includegraphics[scale=0.2]{gscv}
+	\end{figure}
+\end{frame}
+
+\subsubsection{Découpages adaptés}
+\begin{frame}
+	\frametitle{Découpage adapté pour la CV}
+		Une note moyenne est donnée à un set de paramètres selon un score moyen donné sur chacun des découpages.
+		Pour une évaluation cohérente, il faut un découpage cohérent :
+		\begin{figure}[h]
+			\centering
+			\begin{minipage}{0.4\textwidth}
+				\includegraphics[scale=0.25]{kfold}
+			\end{minipage}
+			\begin{minipage}{0.4\textwidth}
+				\includegraphics[scale=0.25]{tscv}
+			\end{minipage}
+		\caption{Comparaison des différents découpages des données employés pour la CV}
+		\end{figure}
 \end{frame}
 
 \subsection{Résultats avec SVR}
@@ -50,7 +68,7 @@
 	\begin{figure}[tc]
 		\includegraphics[scale=0.2]{SVR_premierdecoup}
 		\centering
-		\caption{Premier résultat avec SVR (avec une "mauvaise stratégie" de découpage pour former un modèle prédisant une série temporelle}
+		\caption{Premier résultat avec SVR avec une "mauvaise stratégie" de découpage pour former un modèle prédisant une série temporelle}
 	\end{figure}
 \end{frame}
 \begin{frame}
