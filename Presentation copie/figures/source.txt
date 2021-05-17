@@ -1,0 +1,8 @@
+cv grid : https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation
+kfold : https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation
+timesplitseries : https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation
+
+nn : https://scikit-learn.org/stable/modules/neural_networks_supervised.html
+
+f_lineair : https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+f_dobj : https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression

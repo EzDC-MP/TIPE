@@ -1,0 +1,51 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\sectionentry {1}{Première approche : simple regression}{3}{Première approche : simple regression}{0}}
+\headcommand {\beamer@subsectionpages {3}{2}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Principe}}
+\headcommand {\slideentry {1}{1}{1}{3/3}{Principe}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\slideentry {1}{1}{2}{4/4}{Principe}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\slideentry {1}{1}{3}{5/5}{Principe}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\beamer@subsectionpages {3}{5}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{6}{Optimisation d'hyperparamètres et stratégies}}
+\headcommand {\beamer@subsubsectionentry {0}{1}{2}{1}{6}{Cross-validation}}
+\headcommand {\slideentry {1}{2}{1}{6/6}{Optimisation d'hyperparamètres et stratégies}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{7}{Résultats avec SVR}}
+\headcommand {\slideentry {1}{3}{1}{7/7}{Résultats avec SVR}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\beamer@subsubsectionentry {0}{1}{3}{1}{8}{Découpages adaptés}}
+\headcommand {\slideentry {1}{3}{2}{8/8}{Résultats avec SVR}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\slideentry {1}{3}{3}{9/9}{Résultats avec SVR}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\beamer@sectionpages {3}{9}}
+\headcommand {\beamer@subsectionpages {7}{9}}
+\headcommand {\sectionentry {2}{Approche multivariées}{10}{Approche multivariées}{0}}
+\headcommand {\beamer@subsectionpages {10}{9}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{10}{Multiregresseur : 'RegressorChain'}}
+\headcommand {\slideentry {2}{1}{1}{10/10}{Multiregresseur : 'RegressorChain'}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\beamer@subsectionpages {10}{10}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{11}{Réseau neuronal}}
+\headcommand {\slideentry {2}{2}{1}{11/11}{Réseau neuronal}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\slideentry {2}{2}{2}{12/12}{Réseau neuronal}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {2}{2}{3}{13/13}{Réseau neuronal}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\slideentry {2}{2}{4}{14/14}{Réseau neuronal}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\beamer@partpages {1}{14}}
+\headcommand {\beamer@subsectionpages {11}{14}}
+\headcommand {\beamer@sectionpages {10}{14}}
+\headcommand {\beamer@documentpages {14}}
+\headcommand {\gdef \inserttotalframenumber {14}}
