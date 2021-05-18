@@ -27,7 +27,7 @@
 \subsection{Principe}
 \begin{frame}
 	\frametitle{Principe de l'apprentissage supervisée}
-	Donné une fonction $f : X \rightarrow y$ ($X$ et $y$ des données corrélées), un algoritmhe d'apprentissage supervisé cherche alors à obtenir un modèle $g : X \rightarrow y$ qui estime $f$ à partir d'une d'une partie $Y \subset f(X)$ déjà connue de l'algoritme.
+	Entrainement donnés X et résultats Y fournis
 	\begin{figure}[b]
 		\centering
 		\includegraphics[scale=0.65]{super_schema}
@@ -36,28 +36,24 @@
 
 \begin{frame}
 	\frametitle{Principe de l'apprentissage supervisée}
-	La création du modèle passe par l'optimisation d'une fonction d'objectif, où les paramètres à optimiser sont ceux du modèle.
-	Exemple avec une regression linéaire dont le modèle est de la forme :
-	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=0.7]{f_lineair}
-		\caption{$x$ les données, $w$ les paramètres}
-	\end{figure}
-	\alert{N.B : refaire la figure (celle-ci est volée du manuel scikit)}
+	Optimisation d'une fonction d'objectif
+	
+	Forme de modèle de régression linéaire:
+	\[y(w,x)=w_0+W_1x_1+...+w_px_p\]
+	Ici $x$: données, $w$: paramètres du modèle
 \end{frame}
 
 \begin{frame}
 	\frametitle{ElasticNet}
-	
 	\begin{figure}[b]
-		\includegraphics[scale=0.35]{EN}
+		\includegraphics[scale=0.3]{EN}
 		\centering
-		\caption{résultats peu intéressant dans notre cas..}
+		\caption{Exemple avec régression linéaire}
 	\end{figure}
+	Résultats peu intéressant dans notre cas.
 \end{frame}
 
-\subsection{Optimisation d'hyperparamètres et stratégies}
-\subsubsection{Cross-validation}
+\subsection{Cross-validation et hyperparamètres}
 \begin{frame}
 	\frametitle{Recherche du meilleur paramètre}
 	Principe de la  "cross-validation" :
@@ -80,7 +76,6 @@
 	\end{figure}
 \end{frame}
 
-\subsubsection{Découpages adaptés}
 \begin{frame}
 	\frametitle{Découpage adapté pour la CV}
 		Remise en question de la méthode de découpage
@@ -101,10 +96,10 @@
 	\frametitle{SVR}
 	\begin{figure}[t]
 		\centering
-		\begin{minipage}{0.5\textwidth}
+		\begin{minipage}{0.4\textwidth}
 			\includegraphics[scale=0.25]{SVR_avant_pt_dinflexion}
-		\end{minipage}%
-		\begin{minipage}{0.5\textwidth}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
 			\includegraphics[scale=0.25]{SVR_apres_pt_dinflexion}
 		\end{minipage}
 	\caption{à gauche la prediction avant le pt d'inflexion, à droite, après.}
@@ -121,21 +116,19 @@
 	
 	\begin{figure}[h]
 		\includegraphics[scale=0.45]{mulitregr_epic_fail}%modifier le fichier
-		\caption{résultat avec SVR (insatisfaisant)}
+		\caption{Résultat avec SVR (insatisfaisant)}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{RegressorChain TheilSenRegressor}
+	Changement de régresseur : meilleurs résultats
+	\begin{figure}[h]
+		\includegraphics[scale=0.45]{TheilSenRegressor multivariable to predict deces}
 	\end{figure}
 \end{frame}
 
 \subsection{Réseau neuronal}
-\begin{frame}
-	\frametitle{Premier résultat}
-	140 000 iteration sans les cas confirmés
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.7\textwidth]{NN mlpregressor 140k iter (updated data)}
-		\caption{Échec du modèle sans la courbe des cas confirmés}
-	\end{figure}
-\end{frame}
-
 \begin{frame}
 	\frametitle{Principe du réseau neuronal}
 	\begin{figure}[t]
@@ -147,6 +140,30 @@
 \end{frame}
 
 \begin{frame}
+	\frametitle{Recherche corélations}
+	Corélation pour savoir les données pertinentes
+	\begin{figure}
+		\includegraphics[width=\textwidth]{cor2}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{cor1}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{cor4}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Premier résultat}
+	140 000 iteration sans les cas confirmés
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{NN mlpregressor 140k iter (updated data)}
+	\end{figure}
+	Échec du modèle sans les cas confirmés$\rightarrow$ cohérent avec corrélation
+\end{frame}
+
+\begin{frame}
 	\frametitle{Résultats}
 	Réseaux neuronaux: Meilleurs paramètres
 	\begin{figure}
@@ -154,25 +171,28 @@
 	\end{figure}
 \end{frame}
 
-
 \begin{frame}
-	\frametitle{Augmentation du décalage}
-	Échec car trop décalé
-	\begin{figure}
-		\includegraphics[width=0.95\textwidth]{NN_2}
-	\end{figure}
-\end{frame}
-
-
-
-
-\begin{frame}
-	\frametitle{Résultats}
+	\frametitle{Prédiction durant l'évolution de la situation}
+	Divergence après quelques jours
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=\textwidth]{NN_1}
 	\end{figure}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Augmentation du décalage}
+	Résultats insatisfaisant
+	\begin{figure}
+		\includegraphics[width=0.95\textwidth]{NN_2}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conclusion}
+	Modèle peu fiable hors situation stabilisée ou début d'évolution
+\end{frame}
+
 
 
 \end{document}
