@@ -2,15 +2,18 @@
 \documentclass{beamer}
 \usetheme{Frankfurt}
 \usecolortheme{seahorse}
-\title{Super titre de TIPE}
-\subtitle{sous-titre}
-\author{Alexandrine, Pedro\\\and De Carvalho, Enzo}
+\title{Prédiction des décès dus au Covid19 à l'aide de machine learning}
+\subtitle{}
+\author{De Carvalho, Enzo}
+\institute{numéro d'inscription : 29448}
 \date{2020-2021}
 
 \usepackage{xurl}
 \usepackage{graphicx}
+\usepackage{appendixnumberbeamer}
 \graphicspath{ {figures/} }
 
+\setbeamertemplate{footline}[frame number]
 \begin{document}
 
 \begin{frame}
@@ -25,137 +28,151 @@
 \section{Première approche : simple regression}
 \subsection{Principe}
 \begin{frame}
-	\frametitle{Principe de l'apprentissage supervisée}
-	Donné une fonction $f : X \rightarrow y$ ($X$ et $y$ des données corrélées), un algoritmhe d'apprentissage supervisé cherche alors à obtenir un modèle $g : X \rightarrow y$ qui estime $f$ à partir d'une d'une partie $Y \subset f(X)$ déjà connue de l'algoritme.
-	\begin{figure}[b]
+	\frametitle{Principe de la demarche}
+	\begin{figure}[t]
 		\centering
 		\includegraphics[scale=0.65]{super_schema}
 	\end{figure}
+	\textcolor{blue}{Entraînement supervisé} :\\
+	$\hookrightarrow$ le modèle $\hat{g}$ généralise les données connues $Y$ fournies.
 \end{frame}
 
+\subsection{Regression Linéaire}
 \begin{frame}
-	\frametitle{Principe de l'apprentissage supervisée}
-	La création du modèle passe par l'optimisation d'une fonction d'objectif, où les paramètres à optimiser sont ceux du modèle.
-	Exemple avec une regression linéaire dont le modèle est de la forme :
+	\frametitle{Première approche : Regression linéaire}
+	\onslide<1->
+	En utilisant le modèle \textcolor{blue}{ElasticNet} du module \texttt{scikit-learn}.\\
+	\vspace{0.23 cm}
+	Modèle :
 	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=0.7]{f_lineair}
-		\caption{$x$ les données, $w$ les paramètres}
+		\begin{minipage}{0.3\textwidth}
+			$\hat{g}_{deces} (\omega,t) = \omega t$
+		\end{minipage}
+		\begin{minipage}{0.5\textwidth}
+			\begin{itemize}
+				\item[] $t$ les données (le temps)
+				\item[] $\omega$ un paramètre à déterminer
+			\end{itemize}
+		\end{minipage}
 	\end{figure}
-	\alert{N.B : refaire la figure (celle-ci est volée du manuel scikit)}
-\end{frame}
-
-\begin{frame}
-	\frametitle{ElasticNet}
-	La fonction d'objectif d'ElasticNet minimise : (à l'aide d'un algorithme itératif "Coordinate Descent" (trad?))
+	\onslide<2>
+	\vspace{20pt}
+	Pour trouver $\omega$ le modèle \textcolor{blue}{ElasticNet} résout :
 	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=0.4]{fonction_dobj}
-		\caption{$\alpha$ et $\rho$ sont des hyperparamètres définissant le modèle}
+		$\underset{\omega}{\mathrm{min}} \; \frac{1}{2n_{deces}}||t\omega- f(t)||^{2}_{2} + \alpha \rho |\omega| + \frac{\alpha (1-\rho)}{2}||\omega||^{2}_{2}$
+		\\
 	\end{figure}
-	\begin{figure}[b]
-		\includegraphics[scale=0.2]{EN}
-		\centering
-		\caption{résultats peu intéressant dans notre cas..}
-	\end{figure}
+	\begin{itemize}
+		\item[]$\alpha$ et $\rho$ les hyperparamètres définissant le modèle,\\
+		\item[]$f$ la courbe réelle des décès.
+	\end{itemize}
 \end{frame}
 
-\subsection{Optimisation d'hyperparamètres et stratégies}
-\subsubsection{Cross-validation}
 \begin{frame}
-	\frametitle{Recherche du meilleur paramètre}
-	On recherche la meilleur combinaison des paramètres donnés en évaluant successivement chaque modèle pour chacune des combinaisons possibles selon une stratégie de "cross-validation" :
-	\begin{figure}[b]
-		\centering
-		\includegraphics[scale=0.2]{gscv}
+	\frametitle{Première application}
+	\begin{figure}
+		\includegraphics[scale=0.38]{EN}
+		\caption{Résultats peu satisfaisant... (ici \texttt{l1\_ratio} est $\rho$)}
 	\end{figure}
 \end{frame}
 
+\subsection{Optimisation d'hyperparamètres}
 \subsection{Résultats avec SVR}
 \begin{frame}
-	\frametitle{SVR ; premier résultat}
-	Approche à l'aide du modèle SVR (avec le noyau 'rbf') (Support Vector Regressor)
-	\begin{figure}[tc]
-		\includegraphics[scale=0.2]{SVR_premierdecoup}
+	\frametitle{SVR ; Premier résultat}
+	Modèle \textcolor{blue}{SVR} du module \texttt{scikit-learn}.\\
+	Hyperparamètres :
+	\begin{itemize}
+		\item[]$C$ le paramètre de régularisation
+		\item[]$\epsilon$ la taille du tube de "non-pénalité"
+		\item[]$\gamma$ paramètre du noyeau (\texttt{rbf} ici)
+	\end{itemize}
+	\onslide<2>
+	\begin{figure}[h]
 		\centering
-		\caption{Premier résultat avec SVR avec une "mauvaise stratégie" de découpage pour former un modèle prédisant une série temporelle}
+		\begin{minipage}{0.5\textwidth}
+			\includegraphics[scale=0.37]{svr100}
+		\end{minipage}%
+		\begin{minipage}{0.5\textwidth}
+			\includegraphics[scale=0.37]{svr100000}
+		\end{minipage}
+		\caption{\textcolor{blue}{SVR} avec $C=100$ puis $C=100000$}
+	\end{figure}
+%	\begin{figure}[h]
+%		\includegraphics[scale=0.2]{SVR_premierdecoup}
+%		\centering
+%		\caption{Premier résultat avec SVR avec une "mauvaise stratégie d'entraînement"}
+%	\end{figure}
+\end{frame}
+
+\subsubsection{Cross-validation}
+\begin{frame}
+	\frametitle{Cross-Validation}
+	\begin{figure}[b]
+		\centering
+		\includegraphics[scale=0.3]{gscv}
 	\end{figure}
 \end{frame}
 
-\subsubsection{Découpages adaptés}
 \begin{frame}
-	\frametitle{Découpage adapté pour la CV}
-		Une note moyenne est donnée à un set de paramètres selon un score moyen donné sur chacun des découpages.
-		Pour une évaluation cohérente, il faut un découpage cohérent :
+	\frametitle{Stratégie pour la CV}
 		\begin{figure}[h]
 			\centering
-			\begin{minipage}{0.4\textwidth}
-				\includegraphics[scale=0.25]{kfold}
-			\end{minipage}
-			\begin{minipage}{0.4\textwidth}
-				\includegraphics[scale=0.25]{tscv}
-			\end{minipage}
-		\caption{Comparaison des différents découpages des données employés pour la CV}
+			\includegraphics[scale=0.4]{kfold}
+			\includegraphics[scale=0.4]{tscv}
 		\end{figure}
 \end{frame}
 
 \begin{frame}
-	\frametitle{SVR}
+	\frametitle{Application avec SVR}
 	\begin{figure}[t]
 		\centering
 		\begin{minipage}{0.5\textwidth}
-			\includegraphics[scale=0.25]{SVR_avant_pt_dinflexion}
+			\includegraphics[scale=0.32]{SVR_avant_pt_dinflexion}
 		\end{minipage}%
 		\begin{minipage}{0.5\textwidth}
-			\includegraphics[scale=0.25]{SVR_apres_pt_dinflexion}
+			\includegraphics[scale=0.32]{SVR_apres_pt_dinflexion}
 		\end{minipage}
-	\caption{à gauche la prediction avant le pt d'inflexion, à droite, après.}
 	\end{figure}
-	$\Rightarrow$ Le modèle n'arrive pas à "suivre" sans le point d'inflexion.
+	$\Rightarrow$ \'Echec de géneralisation.
 \end{frame}
 \begin{frame}
-	\frametitle{fbprophet}
-	Approche avec le module fbprophet (designé pour prédire des séries temporelles)
-	\begin{figure}[t]
-		\begin{minipage}{0.3\textwidth}
-			\includegraphics[scale=0.13]{fbprophet_avant_pt_dinflexion}
-		\end{minipage}
-		\begin{minipage}{0.3\textwidth}
-			\includegraphics[scale=0.13]{fbprophet_mid_pt_dinflexion}
-		\end{minipage}
-		\begin{minipage}{0.3\textwidth}
-			\includegraphics[scale=0.13]{fbprophet_apres_pt_dinflexion}
-		\end{minipage}
-	\caption{résultats avec fbprophet (insatisfaisant)}
-	\end{figure}
+	\frametitle{Prophet}
+	Approche avec le module \textcolor{blue}{Prophet} de Facebook
+	\begin{itemize}
+		\centering
+		\item[]\includegraphics[scale=0.4]{prophet_bpt}
+		\includegraphics[scale=0.4]{prophet_mpt}
+		\item[]\includegraphics[scale=0.4]{prophet_ppt}
+	\end{itemize}
 \end{frame}
 
 \section{Approche multivariées}
 \subsection{Multiregresseur : 'RegressorChain'}
 \begin{frame}
 	\frametitle{RegressorChain SVR}
-	Approche avec le multiregresseur\\
-	\tiny{(description de scikit : \url{https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.RegressorChain.html########sklearn.multioutput.RegressorChain})}\\
-	\normalsize{\textit{"Each model makes a prediction in the order specified by the chain using all of the available features provided to the model plus the predictions of models that are earlier in the chain."}}
+	Approche multivariés avec \textcolor{blue}{RegressorChain}\\
+	%\tiny{(description de scikit : \url{https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.RegressorChain.html########sklearn.multioutput.RegressorChain})}\\
+	%\normalsize{\textit{"Each model makes a prediction in the order specified by the chain using all of the available features provided to the model plus the predictions of models that are earlier in the chain."}}
 	\begin{figure}[h]
-		\includegraphics[scale=0.3]{mulitregr_epic_fail}
-		\caption{résultat avec SVR (insatisfaisant)}
+		\includegraphics[scale=0.8]{mulitregr_epic_fail2}
 	\end{figure}
 \end{frame}
 
 \subsection{Réseau neuronal}
 \begin{frame}
-	\frametitle{Explications}
+	\frametitle{Réseau neuronal}
+	Approche par \textcolor{blue}{réseau de neurone}
 	\begin{figure}[t]
 		\centering
 		\begin{minipage}{0.5\textwidth}
-			\includegraphics[scale=0.15]{nn_sk}
+			\includegraphics[scale=0.2]{nn_sk}
 		\end{minipage}
-		\begin{minipage}{0.3\textwidth}
-			\tiny{Basé sur le fonctionnement du cerveau. Donne un jeu de donné successivement interprétées par un jeu de hidden layers. Un hidden layer est un jeu de neurones chacun interprétant et transformant les objets donnés pour décrypter le jeu de donnés précédents. À la fin on aboutit au résultat trouvé par la machine. Le but de l'entrainement ici est l'ajustement de chaque hidden layer et de ces neurones pour tomber sur des prédictions les plus proches possible de la réalité. $Maxiter$ est alors le nombre de fois que le modèle va s'entrainer au maximum si il n’a pas réussi à aboutir à un résultat satisfaisant la tolérance tol donnée.}
-		\end{minipage}
-	\\
-	\alert{N.B trop verbeux !}
+		%\begin{minipage}{0.3\textwidth}
+			%\tiny{Basé sur le fonctionnement du cerveau. Donne un jeu de donné successivement interprétées par un jeu de hidden layers. Un hidden layer est un jeu de neurones chacun interprétant et transformant les objets donnés pour décrypter le jeu de donnés précédents. À la fin on aboutit au résultat trouvé par la machine. Le but de l'entrainement ici est l'ajustement de chaque hidden layer et de ces neurones pour tomber sur des prédictions les plus proches possible de la réalité. $Maxiter$ est alors le nombre de fois que le modèle va s'entrainer au maximum si il n’a pas réussi à aboutir à un résultat satisfaisant la tolérance tol donnée.}
+		%\end{minipage}
+	%\\
+	%\alert{N.B trop verbeux !}
 	\end{figure}
 \end{frame}
 
@@ -164,11 +181,11 @@
 	\begin{figure}[h]
 		\centering
 		\begin{minipage}{0.5\textwidth}
-			\includegraphics[width=\textwidth]{NN_1}
+			\includegraphics[scale=0.37]{NN_1}
 			\centering
-		\end{minipage}
+		\end{minipage}%
 		\begin{minipage}{0.5\textwidth}
-			\includegraphics[width=\textwidth]{NN_2}
+			\includegraphics[scale=0.37]{NN_2}
 			\centering
 		\end{minipage}
 	\end{figure}
@@ -182,10 +199,11 @@
 	\end{figure}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Notes}
-	\alert{N.B les diapos sont trop verbeux; il faut encore un effort de concision, ou alors elles doivent être expliquées à l'oral}\\
-	\alert{N.B sourcer les images}
-\end{frame}
+\appendix
+%\begin{frame}
+%	\frametitle{Notes}
+%	\alert{N.B les diapos sont trop verbeux; il faut %encore un effort de concision, ou alors elles doivent %être expliquées à l'oral}\\
+%	\alert{N.B sourcer les images}
+%\end{frame}
 
 \end{document}

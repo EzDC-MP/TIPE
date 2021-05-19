@@ -9,45 +9,47 @@
 \headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Principe}}
 \headcommand {\slideentry {1}{1}{1}{3/3}{Principe}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\slideentry {1}{1}{2}{4/4}{Principe}{0}}
-\headcommand {\beamer@framepages {4}{4}}
-\headcommand {\slideentry {1}{1}{3}{5/5}{Principe}{0}}
-\headcommand {\beamer@framepages {5}{5}}
-\headcommand {\beamer@subsectionpages {3}{5}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{6}{Optimisation d'hyperparamètres et stratégies}}
-\headcommand {\beamer@subsubsectionentry {0}{1}{2}{1}{6}{Cross-validation}}
-\headcommand {\slideentry {1}{2}{1}{6/6}{Optimisation d'hyperparamètres et stratégies}{0}}
+\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{4}{Regression Linéaire}}
+\headcommand {\slideentry {1}{2}{1}{4/5}{Regression Linéaire}{0}}
+\headcommand {\beamer@framepages {4}{5}}
+\headcommand {\slideentry {1}{2}{2}{6/6}{Regression Linéaire}{0}}
 \headcommand {\beamer@framepages {6}{6}}
-\headcommand {\beamer@subsectionpages {6}{6}}
-\headcommand {\beamer@subsectionentry {0}{1}{3}{7}{Résultats avec SVR}}
-\headcommand {\slideentry {1}{3}{1}{7/7}{Résultats avec SVR}{0}}
-\headcommand {\beamer@framepages {7}{7}}
-\headcommand {\beamer@subsubsectionentry {0}{1}{3}{1}{8}{Découpages adaptés}}
-\headcommand {\slideentry {1}{3}{2}{8/8}{Résultats avec SVR}{0}}
-\headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {1}{3}{3}{9/9}{Résultats avec SVR}{0}}
+\headcommand {\beamer@subsectionpages {4}{6}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{7}{Optimisation d'hyperparamètres}}
+\headcommand {\beamer@subsectionpages {7}{6}}
+\headcommand {\beamer@subsectionentry {0}{1}{4}{7}{Résultats avec SVR}}
+\headcommand {\slideentry {1}{4}{1}{7/8}{Résultats avec SVR}{0}}
+\headcommand {\beamer@framepages {7}{8}}
+\headcommand {\beamer@subsubsectionentry {0}{1}{4}{1}{9}{Cross-validation}}
+\headcommand {\slideentry {1}{4}{2}{9/9}{Résultats avec SVR}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\slideentry {1}{3}{4}{10/10}{Résultats avec SVR}{0}}
+\headcommand {\slideentry {1}{4}{3}{10/10}{Résultats avec SVR}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\beamer@sectionpages {3}{10}}
-\headcommand {\beamer@subsectionpages {7}{10}}
-\headcommand {\sectionentry {2}{Approche multivariées}{11}{Approche multivariées}{0}}
-\headcommand {\beamer@subsectionpages {11}{10}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{11}{Multiregresseur : 'RegressorChain'}}
-\headcommand {\slideentry {2}{1}{1}{11/11}{Multiregresseur : 'RegressorChain'}{0}}
+\headcommand {\slideentry {1}{4}{4}{11/11}{Résultats avec SVR}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\beamer@subsectionpages {11}{11}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{12}{Réseau neuronal}}
-\headcommand {\slideentry {2}{2}{1}{12/12}{Réseau neuronal}{0}}
+\headcommand {\slideentry {1}{4}{5}{12/12}{Résultats avec SVR}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {2}{2}{2}{13/13}{Réseau neuronal}{0}}
+\headcommand {\beamer@sectionpages {3}{12}}
+\headcommand {\beamer@subsectionpages {7}{12}}
+\headcommand {\sectionentry {2}{Approche multivariées}{13}{Approche multivariées}{0}}
+\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{13}{Multiregresseur : 'RegressorChain'}}
+\headcommand {\slideentry {2}{1}{1}{13/13}{Multiregresseur : 'RegressorChain'}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\slideentry {2}{2}{3}{14/14}{Réseau neuronal}{0}}
+\headcommand {\beamer@subsectionpages {13}{13}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{14}{Réseau neuronal}}
+\headcommand {\slideentry {2}{2}{1}{14/14}{Réseau neuronal}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\slideentry {2}{2}{4}{15/15}{Réseau neuronal}{0}}
+\headcommand {\slideentry {2}{2}{2}{15/15}{Réseau neuronal}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\beamer@partpages {1}{15}}
-\headcommand {\beamer@subsectionpages {12}{15}}
-\headcommand {\beamer@sectionpages {11}{15}}
-\headcommand {\beamer@documentpages {15}}
-\headcommand {\gdef \inserttotalframenumber {15}}
+\headcommand {\slideentry {2}{2}{3}{16/16}{Réseau neuronal}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\gdef \insertmainframenumber {14}}
+\headcommand {\beamer@partpages {17}{16}}
+\headcommand {\beamer@subsectionpages {17}{16}}
+\headcommand {\beamer@sectionpages {17}{16}}
+\headcommand {\beamer@documentpages {16}}
+\headcommand {\gdef \inserttotalframenumber {0}}
+\headcommand {\gdef \inserttotalframenumber {14}}
+\headcommand {\gdef \appendixtotalframenumber {0}}

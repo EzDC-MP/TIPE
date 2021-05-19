@@ -14,7 +14,8 @@ from dist_moy import dist_moy
 
 ##############################################################################
 svr = SVR()
-params = {'svr__C' : [100000]}#[10**i for i in range(1,8)]}
+params = {'svr__C' : [10**i for i in range(6,7)],
+          'svr__epsilon' : [0.003]}
 ##########################Traitement de données################################
 cdata = pd.read_csv('covid_numbers.csv',index_col='date',parse_dates=True)
 cdata = cdata[cdata['granularite']=='pays']
