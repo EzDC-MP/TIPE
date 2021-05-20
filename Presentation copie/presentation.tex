@@ -5,15 +5,17 @@
 \usecolortheme{seahorse}
 \title{Super titre de TIPE}
 \subtitle{sous-titre}
-\author{Alexandrine, Pedro\\\and De Carvalho, Enzo}
+\author{Pedro, Alexandrine }
 \date{2020-2021}
 
 \usepackage{xurl}
 \usepackage{graphicx}
 \graphicspath{ {figures/} }
+\setbeamertemplate{footline}[frame number]
 
 \begin{document}
-
+%\usepackage {appendinxnumberbeamer}. pour stoper la numérotation en écrivant
+%\appendix
 \begin{frame}
 	\maketitle
 \end{frame}
@@ -53,10 +55,10 @@
 	Résultats peu intéressant dans notre cas.
 \end{frame}
 
-\subsection{Cross-validation et hyperparamètres}
+\subsection{Validation croisée et hyperparamètres}
 \begin{frame}
 	\frametitle{Recherche du meilleur paramètre}
-	Principe de la  "cross-validation" :
+	Principe de la  validation croisée:
 	\begin{figure}[b]
 		\centering
 		\includegraphics[scale=0.27]{gscv}
@@ -65,7 +67,7 @@
 
 \subsection{Résultats avec SVR}
 \begin{frame}
-	\frametitle{SVR ; premier résultat}
+	\frametitle{SVR, premier résultat}
 	Approche à l'aide du modèle SVR. 
 	
 	Noyau 'rbf' $\rightarrow$ ajustement du paramètre C
@@ -77,7 +79,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Découpage adapté pour la CV}
+	\frametitle{Découpage adapté pour la validation croisée}
 		Remise en question de la méthode de découpage
 		\begin{figure}[h]
 			\centering
@@ -88,7 +90,7 @@
 			\begin{minipage}{0.5\textwidth}
 				\includegraphics[scale=0.3]{tscv}
 			\end{minipage}
-		\caption{Comparaison des découpages pour la CV}
+		\caption{Comparaison des découpages pour la validation croisée}
 		\end{figure}
 \end{frame}
 
@@ -112,11 +114,11 @@
 \subsection{Multiregresseur : 'RegressorChain'}
 \begin{frame}
 	\frametitle{RegressorChain SVR}
-	Multiregresseur RegressorChain\\ Corrélation: Cas confirmé $\rightarrow$ hospitalisé $\rightarrow$ décès 
+	Multiregresseur RegressorChain\\ Corrélation : Cas confirmé $\rightarrow$ hospitalisé $\rightarrow$ décès 
 	
 	\begin{figure}[h]
 		\includegraphics[scale=0.45]{mulitregr_epic_fail}%modifier le fichier
-		\caption{Résultat avec SVR (insatisfaisant)}
+		\caption{Résultat avec SVR insatisfaisant}
 	\end{figure}
 \end{frame}
 
@@ -165,7 +167,7 @@
 
 \begin{frame}
 	\frametitle{Résultats}
-	Réseaux neuronaux: Meilleurs paramètres
+	Réseaux neuronaux : Meilleurs paramètres
 	\begin{figure}
 		\includegraphics[scale=0.6]{NN_3}
 	\end{figure}
