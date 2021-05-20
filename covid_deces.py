@@ -14,8 +14,9 @@ from dist_moy import dist_moy
 
 ##############################################################################
 svr = SVR()
-params = {'svr__C' : [10**i for i in range(6,7)],
-          'svr__epsilon' : [0.003]}
+params = {'svr__C' : [10**i for i in range(6,7)]}#,
+          #'svr__epsilon' : [0.003],
+          #'svr__gamma' : [i for i in [1000, 100, 10, 0.1, 0.001, 'scale']]}
 ##########################Traitement de données################################
 cdata = pd.read_csv('covid_numbers.csv',index_col='date',parse_dates=True)
 cdata = cdata[cdata['granularite']=='pays']
@@ -30,7 +31,7 @@ print(cdata.count())
 cdata
 
 #########################Rangement de données##################################
-date = '2020-10-30'
+date = '2020-09-30'
 
 y = cdata[:date]
 X = pd.to_datetime(y.index)

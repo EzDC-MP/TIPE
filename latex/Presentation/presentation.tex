@@ -1,5 +1,5 @@
 %cc/cv de overleaf.com :s
-\documentclass{beamer}
+\documentclass{beamer}[aspectratio = 43]
 \usetheme{Frankfurt}
 \usecolortheme{seahorse}
 \title{Prédiction des décès dus au Covid19 à l'aide de machine learning}
@@ -162,7 +162,7 @@
 \subsection{Réseau neuronal}
 \begin{frame}
 	\frametitle{Réseau neuronal}
-	Approche par \textcolor{blue}{réseau de neurone}
+	Approche avec un \textcolor{blue}{réseau de neurone}
 	\begin{figure}[t]
 		\centering
 		\begin{minipage}{0.5\textwidth}
@@ -177,7 +177,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Résultats}
+	\frametitle{Application avec réseau neuronal}
 	\begin{figure}[h]
 		\centering
 		\begin{minipage}{0.5\textwidth}
@@ -189,12 +189,17 @@
 			\centering
 		\end{minipage}
 	\end{figure}
+	\begin{figure}
+		\includegraphics[scale=0.4]{NN_3}
+		\caption{échec du modèle sans la courbe des cas confirmés}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Résultats}
+	\frametitle{Application avec réseau neuronal}
 	\begin{figure}
-		\includegraphics[scale=0.6]{NN_3}
+		\includegraphics[scale=0.45]{cor1}
+		\includegraphics[scale=0.4]{NN_up}
 		\caption{échec du modèle sans la courbe des cas confirmés}
 	\end{figure}
 \end{frame}
