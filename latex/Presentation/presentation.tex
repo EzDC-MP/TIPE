@@ -45,8 +45,8 @@
 	\vspace{0.23 cm}
 	Modèle :
 	\begin{figure}[h]
-		\begin{minipage}{0.3\textwidth}
-			$\hat{g}_{deces} (\omega,t) = \omega t$
+		\begin{minipage}{0.4\textwidth}
+			$\hat{g}_{deces} (\omega,t) =\omega_{0} +  \omega_{1} t$
 		\end{minipage}
 		\begin{minipage}{0.5\textwidth}
 			\begin{itemize}
@@ -59,7 +59,7 @@
 	\vspace{20pt}
 	Pour trouver $\omega$ le modèle \textcolor{blue}{ElasticNet} résout :
 	\begin{figure}[h]
-		$\underset{\omega}{\mathrm{min}} \; \frac{1}{2n_{deces}}||t\omega- f(t)||^{2}_{2} + \alpha \rho |\omega| + \frac{\alpha (1-\rho)}{2}||\omega||^{2}_{2}$
+		$\underset{\omega}{\mathrm{min}} \; \frac{1}{2n_{deces}}||\hat{g}_{deces} (\omega,t) - f(t)||^{2}_{2} + \alpha \rho |\omega| + \frac{\alpha (1-\rho)}{2}||\omega||^{2}_{2}$
 		\\
 	\end{figure}
 	\begin{itemize}
@@ -96,7 +96,7 @@
 		\begin{minipage}{0.5\textwidth}
 			\includegraphics[scale=0.37]{svr100000}
 		\end{minipage}
-		\caption{\textcolor{blue}{SVR} avec $C=100$ puis $C=100000$}
+		\caption{\textcolor{blue}{SVR} avec $C=100$, puis $C=100000$}
 	\end{figure}
 %	\begin{figure}[h]
 %		\includegraphics[scale=0.2]{SVR_premierdecoup}
@@ -115,7 +115,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Stratégie pour la CV}
+	\frametitle{Stratégie pour la Cross-Validation}
 		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.4]{kfold}
