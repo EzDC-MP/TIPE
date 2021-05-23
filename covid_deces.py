@@ -31,7 +31,7 @@ print(cdata.count())
 cdata
 
 #########################Rangement de données##################################
-date = '2020-09-30'
+date = '2020-10-15'
 
 y = cdata[:date]
 X = pd.to_datetime(y.index)

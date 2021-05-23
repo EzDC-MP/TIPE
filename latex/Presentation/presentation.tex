@@ -14,6 +14,7 @@
 \graphicspath{ {figures/} }
 
 \setbeamertemplate{footline}[frame number]
+
 \begin{document}
 
 \begin{frame}
@@ -72,7 +73,16 @@
 \begin{frame}
 	\frametitle{Première application}
 	\begin{figure}
-		\includegraphics[scale=0.38]{EN}
+		Prédictions entre le 2020/11/01 et 2020/12/16.
+		\begin{minipage}{0.8\textwidth}
+					\includegraphics[scale=0.6]{EN_2020-11-01}
+		\end{minipage}%
+		\begin{minipage}{0.2\textwidth}
+			\begin{itemize}
+			\item[] $\rho = 0.9$
+			\item[] $\alpha = 0.1$
+			\end{itemize}
+		\end{minipage}
 		\caption{Résultats peu satisfaisant... (ici \texttt{l1\_ratio} est $\rho$)}
 	\end{figure}
 \end{frame}
@@ -81,7 +91,8 @@
 \subsection{Résultats avec SVR}
 \begin{frame}
 	\frametitle{SVR ; Premier résultat}
-	Modèle \textcolor{blue}{SVR} du module \texttt{scikit-learn}.\\
+	Modèle \textcolor{blue}{SVR}% du module \texttt{scikit-learn}.\\
+	\\
 	Hyperparamètres :
 	\begin{itemize}
 		\item[]$C$ le paramètre de régularisation
@@ -92,10 +103,10 @@
 	\begin{figure}[h]
 		\centering
 		\begin{minipage}{0.5\textwidth}
-			\includegraphics[scale=0.37]{svr100}
+			\includegraphics[scale=0.4]{svr100_}
 		\end{minipage}%
 		\begin{minipage}{0.5\textwidth}
-			\includegraphics[scale=0.37]{svr100000}
+			\includegraphics[scale=0.4]{svr100000_}
 		\end{minipage}
 		\caption{\textcolor{blue}{SVR} avec $C=100$, puis $C=100000$}
 	\end{figure}
@@ -108,7 +119,7 @@
 
 \subsubsection{Cross-validation}
 \begin{frame}
-	\frametitle{Cross-Validation}
+	\frametitle{Validation croisée}
 	\begin{figure}[b]
 		\centering
 		\includegraphics[scale=0.3]{gscv}
@@ -116,30 +127,36 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Stratégie pour la Cross-Validation}
+	\frametitle{Stratégie pour la Validation croisée}
 		\begin{figure}[h]
 			\centering
-			\includegraphics[scale=0.4]{kfold}
-			\includegraphics[scale=0.4]{tscv}
+			\includegraphics[scale=0.7]{kfold_}
+			\includegraphics[scale=0.7]{tscv_}
 		\end{figure}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Application avec SVR}
-	\begin{figure}[t]
+		\texttt{params = \{'svr\_\_C' : [10**i for i in range(1,8)]\}}\\
+	\begin{figure}[h]
 		\centering
 		\begin{minipage}{0.5\textwidth}
-			\includegraphics[scale=0.32]{SVR_avant_pt_dinflexion}
+			\includegraphics[scale=0.42]{SVR_avant_pt_dinflexion_}
+			\centering
+			\tiny{\texttt{\{'svr\_\_C' : 100000\}}}
 		\end{minipage}%
 		\begin{minipage}{0.5\textwidth}
-			\includegraphics[scale=0.32]{SVR_apres_pt_dinflexion}
+			\includegraphics[scale=0.42]{SVR_apres_pt_dinflexion_}
+			\centering
+			\tiny{\texttt{\{'svr\_\_C' : 1000000\}}}
 		\end{minipage}
+	\caption{à partir du 2020/10/15, puis du 2020/11/01}
 	\end{figure}
 	$\Rightarrow$ \'Echec de géneralisation.
 \end{frame}
 \begin{frame}
 	\frametitle{Prophet}
-	Approche avec le module \textcolor{blue}{Prophet} de Facebook
+	Approche avec le modèle \textcolor{blue}{Prophet} de Facebook
 	\begin{itemize}
 		\centering
 		\item[]\includegraphics[scale=0.4]{prophet_bpt}
@@ -226,7 +243,9 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{détails sur la regression}
-	
+	\frametitle{Détails sur la regression linéaire}
+	\centering
+	\includegraphics[scale=0.4]{EN_old}
+\end{frame}
 
 \end{document}
