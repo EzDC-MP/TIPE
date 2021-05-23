@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.13)  20 MAY 2021 15:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.13)  23 MAY 2021 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -834,13 +834,13 @@ tex.map}
 ] (./presentation.toc) [2
 
 ]
-<figures/super_schema.png, id=180, 496.10344pt x 169.38281pt>
+<figures/super_schema.png, id=189, 459.96844pt x 158.84344pt>
 File: figures/super_schema.png Graphic file (type png)
 <use figures/super_schema.png>
 Package pdftex.def Info: figures/super_schema.png  used on input line 38.
-(pdftex.def)             Requested size: 322.46341pt x 110.0975pt.
+(pdftex.def)             Requested size: 321.97571pt x 111.18964pt.
 
-Overfull \hbox (15.17354pt too wide) in paragraph at lines 38--38
+Overfull \hbox (14.68584pt too wide) in paragraph at lines 38--38
  [] 
  []
 
@@ -869,87 +869,91 @@ thkerncmss.
 ] [5
 
 ]
-<figures/EN.png, id=305, 547.04375pt x 489.83pt>
-File: figures/EN.png Graphic file (type png)
-<use figures/EN.png>
-Package pdftex.def Info: figures/EN.png  used on input line 77.
-(pdftex.def)             Requested size: 207.87878pt x 186.13733pt.
 
-Overfull \vbox (6.16145pt too high) detected at line 77
- []
+! LaTeX Error: File `EN' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 \end{frame}
+                
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 [6
 
- <./figures/EN.png>]
-<figures/svr100.png, id=344, 382.42876pt x 260.172pt>
+]
+<figures/svr100.png, id=358, 382.42876pt x 260.172pt>
 File: figures/svr100.png Graphic file (type png)
 <use figures/svr100.png>
-Package pdftex.def Info: figures/svr100.png  used on input line 106.
+Package pdftex.def Info: figures/svr100.png  used on input line 107.
 (pdftex.def)             Requested size: 141.49641pt x 96.26212pt.
-<figures/svr100000.png, id=346, 382.42876pt x 266.79675pt>
+<figures/svr100000.png, id=360, 382.42876pt x 266.79675pt>
 File: figures/svr100000.png Graphic file (type png)
 <use figures/svr100000.png>
-Package pdftex.def Info: figures/svr100000.png  used on input line 106.
+Package pdftex.def Info: figures/svr100000.png  used on input line 107.
 (pdftex.def)             Requested size: 141.49641pt x 98.71324pt.
  [7
 
  <./figures/svr100.png> <./figures/svr100000.png>]
 File: figures/svr100.png Graphic file (type png)
 <use figures/svr100.png>
-Package pdftex.def Info: figures/svr100.png  used on input line 106.
+Package pdftex.def Info: figures/svr100.png  used on input line 107.
 (pdftex.def)             Requested size: 141.49641pt x 96.26212pt.
 File: figures/svr100000.png Graphic file (type png)
 <use figures/svr100000.png>
-Package pdftex.def Info: figures/svr100000.png  used on input line 106.
+Package pdftex.def Info: figures/svr100000.png  used on input line 107.
 (pdftex.def)             Requested size: 141.49641pt x 98.71324pt.
-
-[8
+ [8
 
 ]
-<figures/gscv.png, id=428, 888.31876pt x 615.29875pt>
+<figures/gscv.png, id=446, 888.31876pt x 615.29875pt>
 File: figures/gscv.png Graphic file (type png)
 <use figures/gscv.png>
-Package pdftex.def Info: figures/gscv.png  used on input line 115.
+Package pdftex.def Info: figures/gscv.png  used on input line 116.
 (pdftex.def)             Requested size: 266.49768pt x 184.59105pt.
  [9
 
  <./figures/gscv.png>]
-<figures/kfold.png, id=469, 726.715pt x 285.065pt>
+<figures/kfold.png, id=490, 726.715pt x 285.065pt>
 File: figures/kfold.png Graphic file (type png)
 <use figures/kfold.png>
-Package pdftex.def Info: figures/kfold.png  used on input line 124.
+Package pdftex.def Info: figures/kfold.png  used on input line 125.
 (pdftex.def)             Requested size: 290.68085pt x 114.02397pt.
-<figures/tscv.png, id=470, 679.53876pt x 264.99pt>
+<figures/tscv.png, id=491, 679.53876pt x 264.99pt>
 File: figures/tscv.png Graphic file (type png)
 <use figures/tscv.png>
-Package pdftex.def Info: figures/tscv.png  used on input line 124.
+Package pdftex.def Info: figures/tscv.png  used on input line 125.
 (pdftex.def)             Requested size: 271.81068pt x 105.99411pt.
 
-Overfull \vbox (10.9422pt too high) detected at line 124
+Overfull \vbox (10.9422pt too high) detected at line 125
  []
 
 [10
 
  <./figures/kfold.png> <./figures/tscv.png>]
-<figures/SVR_avant_pt_dinflexion.png, id=512, 491.8375pt x 407.5225pt>
+<figures/SVR_avant_pt_dinflexion.png, id=534, 491.8375pt x 407.5225pt>
 File: figures/SVR_avant_pt_dinflexion.png Graphic file (type png)
 <use figures/SVR_avant_pt_dinflexion.png>
 Package pdftex.def Info: figures/SVR_avant_pt_dinflexion.png  used on input lin
-e 138.
+e 139.
 (pdftex.def)             Requested size: 157.3912pt x 130.40985pt.
 
-Overfull \hbox (3.74628pt too wide) in paragraph at lines 138--138
+Overfull \hbox (3.74628pt too wide) in paragraph at lines 139--139
 [][] 
  []
 
-<figures/SVR_apres_pt_dinflexion.png, id=513, 493.845pt x 421.575pt>
+<figures/SVR_apres_pt_dinflexion.png, id=535, 493.845pt x 421.575pt>
 File: figures/SVR_apres_pt_dinflexion.png Graphic file (type png)
 <use figures/SVR_apres_pt_dinflexion.png>
 Package pdftex.def Info: figures/SVR_apres_pt_dinflexion.png  used on input lin
-e 138.
+e 139.
 (pdftex.def)             Requested size: 158.03362pt x 134.90675pt.
 
-Overfull \hbox (4.38869pt too wide) in paragraph at lines 138--138
+Overfull \hbox (4.38869pt too wide) in paragraph at lines 139--139
 [][] 
  []
 
@@ -957,141 +961,128 @@ Overfull \hbox (4.38869pt too wide) in paragraph at lines 138--138
 
  <./figures/SVR_avant_pt_dinflexion.png> <./figures/SVR_apres_pt_dinflexion.png
 >]
-<figures/prophet_bpt.png, id=552, 328.97906pt x 244.66406pt>
+<figures/prophet_bpt.png, id=576, 328.97906pt x 244.66406pt>
 File: figures/prophet_bpt.png Graphic file (type png)
 <use figures/prophet_bpt.png>
-Package pdftex.def Info: figures/prophet_bpt.png  used on input line 148.
+Package pdftex.def Info: figures/prophet_bpt.png  used on input line 149.
 (pdftex.def)             Requested size: 131.5893pt x 97.86388pt.
-<figures/prophet_mpt.png, id=553, 320.69812pt x 243.91125pt>
+<figures/prophet_mpt.png, id=577, 320.69812pt x 243.91125pt>
 File: figures/prophet_mpt.png Graphic file (type png)
 <use figures/prophet_mpt.png>
-Package pdftex.def Info: figures/prophet_mpt.png  used on input line 148.
+Package pdftex.def Info: figures/prophet_mpt.png  used on input line 149.
 (pdftex.def)             Requested size: 128.27696pt x 97.56276pt.
-<figures/prophet_ppt.png, id=554, 328.22626pt x 247.67531pt>
+<figures/prophet_ppt.png, id=578, 328.22626pt x 247.67531pt>
 File: figures/prophet_ppt.png Graphic file (type png)
 <use figures/prophet_ppt.png>
-Package pdftex.def Info: figures/prophet_ppt.png  used on input line 148.
+Package pdftex.def Info: figures/prophet_ppt.png  used on input line 149.
 (pdftex.def)             Requested size: 131.28816pt x 99.06836pt.
  [12
 
  <./figures/prophet_bpt.png> <./figures/prophet_mpt.png> <./figures/prophet_ppt
 .png>]
-<figures/mulitregr_epic_fail2.png, id=593, 420.97275pt x 212.59425pt>
+<figures/mulitregr_epic_fail2.png, id=620, 420.97275pt x 212.59425pt>
 File: figures/mulitregr_epic_fail2.png Graphic file (type png)
 <use figures/mulitregr_epic_fail2.png>
 Package pdftex.def Info: figures/mulitregr_epic_fail2.png  used on input line 1
-60.
+61.
 (pdftex.def)             Requested size: 336.77864pt x 170.07562pt.
 
-Overfull \hbox (29.48877pt too wide) in paragraph at lines 160--160
+Overfull \hbox (29.48877pt too wide) in paragraph at lines 161--161
  [] 
  []
 
 [13
 
  <./figures/mulitregr_epic_fail2.png>]
-<figures/nn_sk.png, id=634, 785.93625pt x 854.19125pt>
+<figures/nn_sk.png, id=662, 785.93625pt x 854.19125pt>
 File: figures/nn_sk.png Graphic file (type png)
 <use figures/nn_sk.png>
-Package pdftex.def Info: figures/nn_sk.png  used on input line 177.
+Package pdftex.def Info: figures/nn_sk.png  used on input line 178.
 (pdftex.def)             Requested size: 157.18446pt x 170.83522pt.
 
-Overfull \hbox (3.53954pt too wide) in paragraph at lines 177--177
+Overfull \hbox (3.53954pt too wide) in paragraph at lines 178--178
 [][] 
  []
 
 [14
 
  <./figures/nn_sk.png>]
-<figures/NN_1.png, id=674, 489.62926pt x 278.2395pt>
+<figures/NN_1.png, id=705, 489.62926pt x 278.2395pt>
 File: figures/NN_1.png Graphic file (type png)
 <use figures/NN_1.png>
-Package pdftex.def Info: figures/NN_1.png  used on input line 196.
+Package pdftex.def Info: figures/NN_1.png  used on input line 197.
 (pdftex.def)             Requested size: 181.15997pt x 102.94699pt.
 
-Overfull \hbox (27.51505pt too wide) in paragraph at lines 196--196
+Overfull \hbox (27.51505pt too wide) in paragraph at lines 197--197
  [][] 
  []
 
-<figures/NN_2.png, id=675, 497.4585pt x 314.3745pt>
+<figures/NN_2.png, id=706, 497.4585pt x 314.3745pt>
 File: figures/NN_2.png Graphic file (type png)
 <use figures/NN_2.png>
-Package pdftex.def Info: figures/NN_2.png  used on input line 196.
+Package pdftex.def Info: figures/NN_2.png  used on input line 197.
 (pdftex.def)             Requested size: 184.05676pt x 116.31673pt.
 
-Overfull \hbox (30.41183pt too wide) in paragraph at lines 196--196
+Overfull \hbox (30.41183pt too wide) in paragraph at lines 197--197
  [][] 
  []
 
-<figures/NN_3.png, id=676, 540.8205pt x 221.02576pt>
+<figures/NN_3.png, id=707, 540.8205pt x 221.02576pt>
 File: figures/NN_3.png Graphic file (type png)
 <use figures/NN_3.png>
-Package pdftex.def Info: figures/NN_3.png  used on input line 196.
+Package pdftex.def Info: figures/NN_3.png  used on input line 197.
 (pdftex.def)             Requested size: 216.32436pt x 88.40872pt.
 
-Overfull \vbox (33.19402pt too high) detected at line 196
+Overfull \vbox (33.19402pt too high) detected at line 197
  []
 
 [15
 
  <./figures/NN_1.png> <./figures/NN_2.png> <./figures/NN_3.png>]
-<figures/cor1.png, id=719, 498.86375pt x 61.22874pt>
+<figures/cor1.png, id=751, 498.86375pt x 61.22874pt>
 File: figures/cor1.png Graphic file (type png)
 <use figures/cor1.png>
-Package pdftex.def Info: figures/cor1.png  used on input line 205.
+Package pdftex.def Info: figures/cor1.png  used on input line 206.
 (pdftex.def)             Requested size: 224.4866pt x 27.55266pt.
-<figures/NN_up.png, id=720, 462.528pt x 346.896pt>
+<figures/NN_up.png, id=752, 462.528pt x 346.896pt>
 File: figures/NN_up.png Graphic file (type png)
 <use figures/NN_up.png>
-Package pdftex.def Info: figures/NN_up.png  used on input line 205.
+Package pdftex.def Info: figures/NN_up.png  used on input line 206.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
  [16
 
  <./figures/cor1.png> <./figures/NN_up.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 207.
+(hyperref)                removing `\translate ' on input line 208.
 
-\tf@nav=\write6
-\openout6 = `presentation.nav'.
+[17
 
-\tf@toc=\write7
-\openout7 = `presentation.toc'.
+])
+Runaway argument?
+\let \AtEndDocument \@firstofone \@enddocumenthook \@checkend {docume\ETC.
+! File ended while scanning use of \beamer@collect@@body.
+<inserted text> 
+                \par 
+<*> presentation.tex
+                    
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
 
-\tf@snm=\write8
-\openout8 = `presentation.snm'.
+! Emergency stop.
+<*> presentation.tex
+                    
+*** (job aborted, no legal \end found)
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 214.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 214.
-(./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 214.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 214.
-Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 69AC01D2CED73AE21FEE936A73E2EB76;566.
- ) 
+ 
 Here is how much of TeX's memory you used:
- 18328 strings out of 480471
- 351804 string characters out of 5903300
- 605036 words of memory out of 5000000
- 33858 multiletter control sequences out of 15000+600000
+ 18355 strings out of 480471
+ 351903 string characters out of 5903300
+ 601670 words of memory out of 5000000
+ 33873 multiletter control sequences out of 15000+600000
  544124 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,20n,72p,819b,771s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/tex
-live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2020/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmss8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmss9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi1
-0.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><c:
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/
-2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf
--dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on presentation.pdf (16 pages, 881480 bytes).
-PDF statistics:
- 813 PDF objects out of 1000 (max. 8388607)
- 717 compressed objects within 8 object streams
- 42 named destinations out of 1000 (max. 500000)
- 250 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+!  ==> Fatal error occurred, no output PDF file produced!

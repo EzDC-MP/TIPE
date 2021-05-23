@@ -31,9 +31,9 @@
 	\frametitle{Principe de la demarche}
 	\begin{figure}[t]
 		\centering
-		\includegraphics[scale=0.65]{super_schema}
+		\includegraphics[scale=0.7]{super_schema}
 	\end{figure}
-	\textcolor{blue}{Entraînement supervisé} :\\
+	%\textcolor{blue}{Entraînement supervisé} :\\
 	$\hookrightarrow$ le modèle $\hat{g}$ généralise les données connues $Y$ fournies.
 \end{frame}
 
@@ -41,31 +41,32 @@
 \begin{frame}
 	\frametitle{Première approche : Regression linéaire}
 	\onslide<1->
-	En utilisant le modèle \textcolor{blue}{ElasticNet} du module \texttt{scikit-learn}.\\
+	En utilisant \textcolor{blue}{ElasticNet} %du module \texttt{scikit-learn}.\\
+	
 	\vspace{0.23 cm}
 	Modèle :
 	\begin{figure}[h]
-		\begin{minipage}{0.4\textwidth}
+		\begin{minipage}{0.35\textwidth}
 			$\hat{g}_{deces} (\omega,t) =\omega_{0} +  \omega_{1} t$
-		\end{minipage}
-		\begin{minipage}{0.5\textwidth}
+		\end{minipage}%
+		\begin{minipage}{0.65\textwidth}
 			\begin{itemize}
 				\item[] $t$ les données (le temps)
-				\item[] $\omega$ un paramètre à déterminer
+				\item[] 
+				$\omega = 
+				\begin{pmatrix}
+					\omega_{0} \\
+					\omega_{1}
+				\end{pmatrix}$ un paramètre à déterminer
 			\end{itemize}
 		\end{minipage}
 	\end{figure}
 	\onslide<2>
 	\vspace{20pt}
-	Pour trouver $\omega$ le modèle \textcolor{blue}{ElasticNet} résout :
-	\begin{figure}[h]
-		$\underset{\omega}{\mathrm{min}} \; \frac{1}{2n_{deces}}||\hat{g}_{deces} (\omega,t) - f(t)||^{2}_{2} + \alpha \rho |\omega| + \frac{\alpha (1-\rho)}{2}||\omega||^{2}_{2}$
-		\\
-	\end{figure}
-	\begin{itemize}
-		\item[]$\alpha$ et $\rho$ les hyperparamètres définissant le modèle,\\
-		\item[]$f$ la courbe réelle des décès.
-	\end{itemize}
+	le modèle \textcolor{blue}{ElasticNet} détermine alors $\omega$.\\
+	Le résultat dépend des hyperparamètres : $\alpha$ et $\rho$
+	
+
 \end{frame}
 
 \begin{frame}
@@ -210,5 +211,22 @@
 %	\alert{N.B les diapos sont trop verbeux; il faut %encore un effort de concision, ou alors elles doivent %être expliquées à l'oral}\\
 %	\alert{N.B sourcer les images}
 %\end{frame}
+
+\begin{frame}
+	\frametitle{fonction d'objectif d'ElasticNet}
+	\textcolor{blue}{ElasticNet} cherche $\omega$ tel que :
+	\begin{figure}[h]
+		$\underset{\omega}{\mathrm{min}} \; \frac{1}{2n_{deces}}||\hat{g}_{deces} (\omega,t) - f(t)||^{2}_{2} + \alpha \rho |\omega| + \frac{\alpha (1-\rho)}{2}||\omega||^{2}_{2}$
+		\\
+	\end{figure}
+	\begin{itemize}
+		\item[]$\alpha$ et $\rho$ les hyperparamètres définissant le modèle,\\
+		\item[]$f$ la courbe réelle des décès.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{détails sur la regression}
+	
 
 \end{document}
