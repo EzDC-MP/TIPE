@@ -36,7 +36,7 @@ for i in covid:
                               'patients_hospitalises','total_cas_confirmes']):
         covid.drop([i], axis=1, inplace = True)
 
-jour_decale=14
+jour_decale=7
 covid = covid.dropna(axis=0)
 print(covid.count())
 timeshift_day(covid["total_deces_hopital"],-jour_decale)
@@ -47,20 +47,20 @@ print(full_size)
 subject=['patients_reanimation',
          'patients_hospitalises','total_cas_confirmes']
 result=["total_deces_hopital"]
-predit_jour=20
-size=full_size-predit_jour
+#start:2020-03-17
+predit_jour='2021-04-01'
 
-X = covid[:size][subject]
-y = covid[:size][result]
-y = y.values.reshape(size,)
-X_result=covid[size:][subject]
+X = covid[:predit_jour][subject]
+y = covid[result][:predit_jour]
+y = y.values.reshape(381,)
+X_result=covid[predit_jour:][subject]
 #X_result=X_result.values.reshape(348-size,1)
-y_result=covid[size:][result]
-y_result = y_result.values.reshape(full_size-size,)
+y_result=covid[result][predit_jour:]
+y_result = y_result.values.reshape(40,)
 
 params={
-    'mlpregressor__max_iter': [90000],
-    'mlpregressor__tol': [0.00001],
+    'mlpregressor__max_iter': [10000],
+    'mlpregressor__tol': [0.0001],
     'mlpregressor__n_iter_no_change': [2],
 }
 
@@ -83,6 +83,6 @@ covid=covid[jour_decale:]
 
 plt.figure()
 plt.plot(covid.index,covid["total_deces_hopital"])
-plt.plot(covid.index[size-jour_decale:],grid.predict(covid[size-jour_decale:][subject]))
-plt.plot(covid.index[:size-jour_decale],grid.predict(covid[:size-jour_decale][subject]))
+plt.plot(covid.index[374:],grid.predict(covid['2021-03-25':][subject]))
+plt.plot(covid.index[:374],grid.predict(covid[:'2021-03-25'][subject]))
 plt.show()

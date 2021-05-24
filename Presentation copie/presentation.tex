@@ -2,7 +2,7 @@
 \documentclass{beamer}
 \usetheme{Frankfurt}
 \usecolortheme{seahorse}
-\title{Étude sur le propagation du sars-cov1 avec machine learning}
+\title{Étude sur le propagation du Covid 19 avec machine learning}
 %\subtitle{sous-titre}
 \date{2020-2021}
 \institute{numero d'inscription : 41758}
@@ -12,7 +12,6 @@
 \usepackage{xurl}
 \usepackage{graphicx}
 \usepackage{appendixnumberbeamer}
-
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{csquotes}
@@ -29,18 +28,8 @@
 	\frametitle{Sommaire}
 	\tableofcontents
 \end{frame}
-
+%%%PARLER D'APPRENTISSAGE SUPERVISÉ
 \section{Première approche : simple regression}
-\subsection{Principe}
-\begin{frame}
-	\frametitle{Principe de l'apprentissage supervisée}%	A DÉGAGER
-	Entrainement donnés X et résultats Y fournis
-	\begin{figure}[b]
-		\centering
-		\includegraphics[scale=0.65]{super_schema}
-	\end{figure}
-\end{frame}
-
 \subsection{Validation croisée et hyperparamètres}
 \begin{frame}
 	\frametitle{Recherche du meilleur paramètre}
@@ -82,21 +71,22 @@
 
 \begin{frame}
 	\frametitle{SVR}
-	g:c=100k
-	d,c=1M
+	Avec $C=10^{5}$
 	\begin{figure}[t]
 		\centering
 		\begin{minipage}{0.4\textwidth}
-			\includegraphics[scale=0.25]{SVR_avant_pt_dinflexion}
+			\includegraphics[scale=0.26]{SVR_avant_pt_dinflexion}
 		\end{minipage}
 		\begin{minipage}{0.4\textwidth}
-			\includegraphics[scale=0.25]{SVR_apres_pt_dinflexion}
+			\includegraphics[scale=0.26]{SVR_apres_pt_dinflexion}
 		\end{minipage}
-	\caption{à gauche la prediction avant le pt d'inflexion, à droite, après.}
+	\caption{À gauche: prediction avant point d'inflexion; à droite: après.}
 	\end{figure}
-	$\Rightarrow$ Le modèle n'arrive pas à "suivre" sans le point d'inflexion.
+	$\Rightarrow$ Prédiction inefficace du point d'inflexion.
 \end{frame}
 
+\section{Approche multivariées}
+\subsection{Multiregresseur : 'RegressorChain'}
 \begin{frame}%SUPPRIMER CELUI LA?
 	\frametitle{RegressorChain SVR}
 	Multiregresseur RegressorChain\\ Corrélation : Cas confirmé $\rightarrow$ hospitalisé $\rightarrow$ décès 
@@ -111,8 +101,9 @@
 	\frametitle{RegressorChain TheilSenRegressor}
 	Changement de régresseur : meilleurs résultats
 	\begin{figure}[h]
-		\includegraphics[scale=0.327]{theiltruc 90000 iter tol 0,001}
 		\includegraphics[scale=0.327]{theiltruc 9000 iter tol 0,001; 10 jour de plus}
+		\includegraphics[scale=0.327]{theiltruc 90000 iter tol 0,001}
+		\caption{Prédiction avec et sans point d'inflexion}
 	\end{figure}
 \end{frame}
 
@@ -127,40 +118,27 @@
 	\end{figure}
 \end{frame}
 
-
-\section{Approche multivariées}
-\subsection{Multiregresseur : 'RegressorChain'}
 \begin{frame}
-	\frametitle{Recherche corélations}
-	Corélation pour savoir les données pertinentes
-	\begin{figure}
-		\includegraphics[width=\textwidth]{cor2}
-	\end{figure}
-	\begin{figure}
-		\includegraphics[width=\textwidth]{cor1}
-	\end{figure}
-	\begin{figure}
-		\includegraphics[width=\textwidth]{cor4}
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Premier résultat}
-	DÉCALAGE COURBE
-	\begin{figure}[h]
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Premier résultat}
-	
+	\frametitle{Décalage de courbes}
+	Représentation avant et aprés décalage
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.4615\textwidth]{NN mlpregressor 140k iter (updated data)}
-		\includegraphics[width=0.46\textwidth]{NN_1}
-		\caption{Résultat avec SVR insatisfaisant}
+		\includegraphics[scale=0.5]{decal2}
+		\includegraphics[scale=0.5]{decal1}
+		\includegraphics[scale=0.4]{décalage 7 jour deces}
 	\end{figure}
-	Échec du modèle sans les cas confirmés$\rightarrow$ cohérent avec corrélation
+\end{frame}
+
+\begin{frame}
+	\frametitle{Corrélation et Premier résultat}
+	Corrélation cas confirmés et décès : 0.978
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.46\textwidth]{NN_1}
+		\includegraphics[width=0.4617\textwidth]{NN mlpregressor 140k iter (updated data)}
+		\caption{Tests avec et sans cas confirmés}
+	\end{figure}
+	Échec du modèle sans les cas confirmés $\rightarrow$ cohérent avec corrélation
 \end{frame}
 
 \begin{frame}
@@ -172,19 +150,11 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Prédiction durant l'évolution de la situation}
-	Divergence après quelques jours
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=\textwidth]{NN_1}
-	\end{figure}
-\end{frame}
-
-\begin{frame}
 	\frametitle{Augmentation du décalage}
-	Résultats insatisfaisant (aussi avec 14 jour de décalage)
+	Résultats insatisfaisant 
 	\begin{figure}
-		\includegraphics[width=0.95\textwidth]{NN_2}
+		\includegraphics[width=0.7\textwidth]{NN_2}
+		\caption{Tests avec 30 jour de décalage}
 	\end{figure}
 \end{frame}
 
@@ -195,13 +165,6 @@
 
 \appendix
 
-\begin{frame}
-	\frametitle{Augmentation du décalage}
-	Résultats insatisfaisant
-	\begin{figure}
-		\includegraphics[width=0.95\textwidth]{NN_2}
-	\end{figure}
-\end{frame}
 
 
 \end{document}

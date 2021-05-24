@@ -21,7 +21,7 @@ from sklearn.model_selection import GridSearchCV
 
 ### décale un matrice de données indéxées par un date à n jours en avance
 def timeshift_day(data,n):
-    data.index = data.index.shift(periods = n, freq ='D')
+    data.index = data.index.shift(n,freq='D')
 
 
 tscv = TimeSeriesSplit(n_splits=5)
@@ -39,8 +39,14 @@ for i in covid:
 jour_decale=10
 covid = covid.dropna(axis=0)
 print(covid.count())
+print(covid["total_deces_hopital"]['2020-03-17':].head())
 
-print(covid["total_deces_hopital"][35])
-print(covid["total_deces_hopital"][45])
-timeshift_day(covid["total_deces_hopital"],-jour_decale)
-print(covid["total_deces_hopital"][35])
+plt.figure()
+
+plt.plot(covid.index,covid["total_deces_hopital"]['2020-03-17':],label="Courbe non décalée")
+timeshift_day(covid["total_deces_hopital"],-7)
+print(covid["total_deces_hopital"]['2020-03-17':].head())
+plt.plot(covid.index[:-14],covid["total_deces_hopital"]['2020-03-24':],label="Courbe décalée")
+plt.legend()
+
+plt.show()
