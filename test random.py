@@ -43,10 +43,11 @@ print(covid["total_deces_hopital"]['2020-03-17':].head())
 
 plt.figure()
 
-plt.plot(covid.index,covid["total_deces_hopital"]['2020-03-17':],label="Courbe non décalée")
+plt.plot(covid.index,covid["total_deces_hopital"]['2020-03-17':],label="décès non décalée")
+plt.plot(covid.index,covid['patients_hospitalises']['2020-03-17':],label="patients hospitalisés")
 timeshift_day(covid["total_deces_hopital"],-7)
 print(covid["total_deces_hopital"]['2020-03-17':].head())
-plt.plot(covid.index[:-14],covid["total_deces_hopital"]['2020-03-24':],label="Courbe décalée")
+plt.plot(covid.index[:-14],covid["total_deces_hopital"]['2020-03-24':],label="décès décalée")
 plt.legend()
 
 plt.show()
