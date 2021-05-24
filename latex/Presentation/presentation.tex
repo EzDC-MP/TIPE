@@ -1,20 +1,32 @@
+%%%%%%%%%%%%%%%%%%%%%%% Le TIPE !! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %cc/cv de overleaf.com :s
+
+%%%%% intro/doc info %%%%%%
 \documentclass{beamer}[aspectratio = 43]
 \usetheme{Frankfurt}
 \usecolortheme{whale}
-\title{Prédiction des décès dus au Covid19 à l'aide de machine learning}
+\title{Prédiction des décès dus au Covid19 à l'aide de machine learning.}
 \subtitle{}
 \author{Enzo De Carvalho}
-\institute{numéro d'inscription : 29448}
-\date{2020-2021}
+\date{
+	Numéro d'inscription : 29448\\%
+	\vspace{5pt}
+	2020-2021\\%
+	}
+\setbeamertemplate{footline}[frame number]
 
+%%%%% packages %%%%%
+\usepackage [french]{babel}
+\usepackage [utf8]{inputenc}
+\usepackage [T1] {fontenc}
+\usepackage{xspace}
 \usepackage{xurl}
 \usepackage{graphicx}
 \usepackage{appendixnumberbeamer}
 \graphicspath{ {figures/} }
 
-\setbeamertemplate{footline}[frame number]
 
+%%%%%%% Le doc %%%%%%%
 \begin{document}
 
 \begin{frame}
@@ -27,9 +39,9 @@
 \end{frame}
 
 \section{Première approche : simple regression}
-\subsection{Principe}
+\subsection*{Principe}
 \begin{frame}
-	\frametitle{Principe de la demarche}
+	\frametitle{Principe de la démarche}
 	\begin{figure}[t]
 		\centering
 		\includegraphics[scale=0.7]{super_schema}
@@ -38,9 +50,9 @@
 	$\hookrightarrow$ le modèle $\hat{g}$ généralise les données connues $Y$ fournies.
 \end{frame}
 
-\subsection{Regression Linéaire}
+\subsection*{Regression Linéaire}
 \begin{frame}
-	\frametitle{Première approche : Regression linéaire}
+	\frametitle{Première approche : regression linéaire}
 	\onslide<1->
 	En utilisant \textcolor{blue}{ElasticNet} %du module \texttt{scikit-learn}.\\
 	
@@ -87,8 +99,8 @@
 	\end{figure}
 \end{frame}
 
-\subsection{Optimisation d'hyperparamètres}
-\subsection{Résultats avec SVR}
+\subsection*{Optimisation d'hyperparamètres}
+\subsection*{Résultats avec SVR}
 \begin{frame}
 	\frametitle{SVR ; Premier résultat}
 	Modèle \textcolor{blue}{SVR}% du module \texttt{scikit-learn}.\\
@@ -96,7 +108,7 @@
 	Hyperparamètres :
 	\begin{itemize}
 		\item[]$C$ le paramètre de régularisation
-		\item[]$\epsilon$ la taille du tube de "non-pénalité"
+		\item[]$\epsilon$ la taille du tube de \og non-pénalité \fg
 		\item[]$\gamma$ paramètre du noyeau (\texttt{rbf} ici)
 	\end{itemize}
 	\onslide<2>
@@ -117,12 +129,13 @@
 %	\end{figure}
 \end{frame}
 
-\subsubsection{Cross-validation}
+\subsubsection*{Cross-validation}
 \begin{frame}
 	\frametitle{Validation croisée}
-	\begin{figure}[b]
+	Pour une combinaison d'hyperparamètre :
+	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.3]{gscv}
+		\includegraphics[scale=0.25]{VC}
 	\end{figure}
 \end{frame}
 
@@ -154,11 +167,12 @@
 	\end{figure}
 	$\Rightarrow$ \'Echec de géneralisation.
 \end{frame}
+
 \begin{frame}
 	\frametitle{Prophet}
-	Approche avec le modèle \textcolor{blue}{Prophet} de Facebook
+	Approche avec le modèle \textcolor{blue}{Prophet} de 
+Facebook
 	\begin{itemize}
-		\centering
 		\item[]\includegraphics[scale=0.4]{prophet_bpt}
 		\includegraphics[scale=0.4]{prophet_mpt}
 		\item[]\includegraphics[scale=0.4]{prophet_ppt}
@@ -166,18 +180,21 @@
 \end{frame}
 
 \section{Approche multivariées}
-\subsection{Multiregresseur : 'RegressorChain'}
+\subsection*{Multiregresseur : 'RegressorChain'}
 \begin{frame}
 	\frametitle{RegressorChain SVR}
-	Approche multivariés avec \textcolor{blue}{RegressorChain}\\
+	Approche multivarié avec \textcolor{blue}{RegressorChain}\\
 	%\tiny{(description de scikit : \url{https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.RegressorChain.html########sklearn.multioutput.RegressorChain})}\\
 	%\normalsize{\textit{"Each model makes a prediction in the order specified by the chain using all of the available features provided to the model plus the predictions of models that are earlier in the chain."}}
+	\texttt{params = \{\\'svr\_\_C' : [10**i for i in range(1,8)],\\ 
+	'svr\_\_epsilon': [0.1,0.01,0.001]\}}\\
 	\begin{figure}[h]
-		\includegraphics[scale=0.8]{mulitregr_epic_fail2}
+		\includegraphics[scale=0.5]{mr_c10000_eps0001}
+		\caption{ \textcolor{blue}{RegressorChain} avec $C = 10000$ et $\epsilon = 0.001$}
 	\end{figure}
 \end{frame}
 
-\subsection{Réseau neuronal}
+\subsection*{Réseau neuronal}
 \begin{frame}
 	\frametitle{Réseau neuronal}
 	Approche avec un \textcolor{blue}{réseau de neurone}
@@ -199,29 +216,34 @@
 	\begin{figure}[h]
 		\centering
 		\begin{minipage}{0.5\textwidth}
-			\includegraphics[scale=0.37]{NN_1}
+			\includegraphics[scale=0.42]{NN_1_}
 			\centering
 		\end{minipage}%
 		\begin{minipage}{0.5\textwidth}
-			\includegraphics[scale=0.37]{NN_2}
+			\includegraphics[scale=0.42]{NN_2_}
 			\centering
 		\end{minipage}
 	\end{figure}
 	\begin{figure}
-		\includegraphics[scale=0.4]{NN_3}
-		\caption{échec du modèle sans la courbe des cas confirmés}
+		\includegraphics[scale=0.4]{NN_3_}
 	\end{figure}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Application avec réseau neuronal}
+	taux de corrélation entre\\ \texttt{total\_cas\_confirmes} et \texttt{total\_deces\_hopital} : \texttt{0.977939} 
 	\begin{figure}
-		\includegraphics[scale=0.45]{cor1}
-		\includegraphics[scale=0.4]{NN_up}
+		\includegraphics[scale=0.4]{NN_up_}
 	\end{figure}
 	$\Rightarrow$ échec du modèle sans la courbe des cas confirmés
 \end{frame}
 
+\begin{frame}
+	\frametitle{Conclusion}
+$\Rightarrow$ Résultats peu convaincants.
+\end{frame}
+
+%%%%%%% La fin %%%%%%%%
 \appendix
 %\begin{frame}
 %	\frametitle{Notes}
@@ -246,6 +268,12 @@
 	\frametitle{Détails sur la regression linéaire}
 	\centering
 	\includegraphics[scale=0.4]{EN_old}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Détails sur la regression multivarié}
+	\centering
+	\includegraphics[scale=0.5]{Multi_regresseur}
 \end{frame}
 
 \end{document}

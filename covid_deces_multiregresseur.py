@@ -15,7 +15,7 @@ from sklearn.model_selection import TimeSeriesSplit
 ##############################################################################
 tscv = TimeSeriesSplit(n_splits=15) #Decoupage pour le CV adapté aux series temporelles.
 scorer = make_scorer(mean_squared_error, greater_is_better=False) #https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error
-model = make_pipeline(StandardScaler(), RegressorChain(SVR(), order=[2,1,0]))
+model = make_pipeline(StandardScaler(), RegressorChain(SVR(), order=[0,2,1]))
 params = {'regressorchain__base_estimator__C': [10**i for i in range(2,8)],
           'regressorchain__base_estimator__epsilon': [0.001,0.1,0.01],
           'regressorchain__base_estimator__kernel': ['rbf']}
@@ -33,7 +33,7 @@ for i in cdata:
 cdata = cdata.dropna(axis=0)
 
 ##############################################################################
-date = '2020-11-25'
+date = '2020-11-01'
 
 Y = cdata['2020-03-01':date]
 x = pd.to_datetime(Y.index)
