@@ -1,7 +1,7 @@
 \beamer@sectionintoc {1}{Première approche : simple regression}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Principe}{3}{0}{1}
-\beamer@subsectionintoc {1}{2}{Validation croisée et hyperparamètres}{6}{0}{1}
-\beamer@subsectionintoc {1}{3}{Résultats avec SVR}{7}{0}{1}
-\beamer@sectionintoc {2}{Approche multivariées}{10}{0}{2}
-\beamer@subsectionintoc {2}{1}{Multiregresseur : 'RegressorChain'}{10}{0}{2}
-\beamer@subsectionintoc {2}{2}{Réseau neuronal}{13}{0}{2}
+\beamer@subsectionintoc {1}{2}{Validation croisée et hyperparamètres}{4}{0}{1}
+\beamer@subsectionintoc {1}{3}{Résultats avec SVR}{5}{0}{1}
+\beamer@subsectionintoc {1}{4}{Réseau neuronal}{10}{0}{1}
+\beamer@sectionintoc {2}{Approche multivariées}{11}{0}{2}
+\beamer@subsectionintoc {2}{1}{Multiregresseur : 'RegressorChain'}{11}{0}{2}

@@ -12,6 +12,10 @@
 \usepackage{xurl}
 \usepackage{graphicx}
 \usepackage{appendixnumberbeamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
 \graphicspath{ {figures/} }
 \setbeamertemplate{footline}[frame number]
 
@@ -37,25 +41,6 @@
 	\end{figure}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Principe de l'apprentissage supervisée}
-	Optimisation d'une fonction d'objectif
-	
-	Forme de modèle de régression linéaire:
-	\[y(w,x)=w_0+W_1x_1+...+w_px_p\]
-	Ici $x$: données, $w$: paramètres du modèle
-\end{frame}
-
-\begin{frame}
-	\frametitle{ElasticNet}
-	\begin{figure}[b]
-		\includegraphics[scale=0.43]{EN}
-		\centering
-		\caption{Exemple avec régression linéaire}
-	\end{figure}
-	Peu intéressant dans notre cas.
-\end{frame}
-
 \subsection{Validation croisée et hyperparamètres}
 \begin{frame}
 	\frametitle{Recherche du meilleur paramètre}
@@ -69,13 +54,13 @@
 \subsection{Résultats avec SVR}
 \begin{frame}
 	\frametitle{SVR, premier résultat}
-	Approche à l'aide du modèle SVR. 
+	Approche à l'aide du modèle SVR.
 	
-	Noyau 'rbf' $\rightarrow$ ajustement du paramètre C
+	Noyau «\,rbf\,» $\rightarrow$ ajustement du paramètre $C$
 	\begin{figure}[tc]
 		\includegraphics[scale=0.2]{SVR_premierdecoup}
 		\centering
-		\caption{Premier résultat avec SVR et découpage inadapté}
+		\caption{Premier résultat avec SVR et découpage inadapté, $C=50k$}
 	\end{figure}
 \end{frame}
 
@@ -97,6 +82,8 @@
 
 \begin{frame}
 	\frametitle{SVR}
+	g:c=100k
+	d,c=1M
 	\begin{figure}[t]
 		\centering
 		\begin{minipage}{0.4\textwidth}
@@ -108,23 +95,6 @@
 	\caption{à gauche la prediction avant le pt d'inflexion, à droite, après.}
 	\end{figure}
 	$\Rightarrow$ Le modèle n'arrive pas à "suivre" sans le point d'inflexion.
-\end{frame}
-
-
-\section{Approche multivariées}
-\subsection{Multiregresseur : 'RegressorChain'}
-\begin{frame}
-	\frametitle{Recherche corélations}
-	Corélation pour savoir les données pertinentes
-	\begin{figure}
-		\includegraphics[width=\textwidth]{cor2}
-	\end{figure}
-	\begin{figure}
-		\includegraphics[width=\textwidth]{cor1}
-	\end{figure}
-	\begin{figure}
-		\includegraphics[width=\textwidth]{cor4}
-	\end{figure}
 \end{frame}
 
 \begin{frame}%SUPPRIMER CELUI LA?
@@ -157,12 +127,38 @@
 	\end{figure}
 \end{frame}
 
+
+\section{Approche multivariées}
+\subsection{Multiregresseur : 'RegressorChain'}
+\begin{frame}
+	\frametitle{Recherche corélations}
+	Corélation pour savoir les données pertinentes
+	\begin{figure}
+		\includegraphics[width=\textwidth]{cor2}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{cor1}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{cor4}
+	\end{figure}
+\end{frame}
+
 \begin{frame}
 	\frametitle{Premier résultat}
-	140 000 iteration sans les cas confirmés
+	DÉCALAGE COURBE
+	\begin{figure}[h]
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Premier résultat}
+	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.7\textwidth]{NN mlpregressor 140k iter (updated data)}
+		\includegraphics[width=0.4615\textwidth]{NN mlpregressor 140k iter (updated data)}
+		\includegraphics[width=0.46\textwidth]{NN_1}
+		\caption{Résultat avec SVR insatisfaisant}
 	\end{figure}
 	Échec du modèle sans les cas confirmés$\rightarrow$ cohérent avec corrélation
 \end{frame}
@@ -186,7 +182,7 @@
 
 \begin{frame}
 	\frametitle{Augmentation du décalage}
-	Résultats insatisfaisant
+	Résultats insatisfaisant (aussi avec 14 jour de décalage)
 	\begin{figure}
 		\includegraphics[width=0.95\textwidth]{NN_2}
 	\end{figure}
