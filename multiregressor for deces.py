@@ -11,6 +11,7 @@ from matplotlib import pyplot as plt
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVR
+from sklearn.linear_model import TheilSenRegressor
 from sklearn.multioutput import RegressorChain
 from sklearn.model_selection import GridSearchCV
 from pandas.plotting import register_matplotlib_converters
@@ -53,7 +54,7 @@ params={#'regressorchain__base_estimator__tol':[i*0.001 for i in range(1,20)],
 }
 
 
-chain=RegressorChain(SVR())
+chain=RegressorChain(TheilSenRegressor())
 
 model=make_pipeline(StandardScaler(), chain)
 

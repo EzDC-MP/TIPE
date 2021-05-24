@@ -1,16 +1,17 @@
 %cc/cv de overleaf.com :s
-%RAJOUTER DES DIAPO
 \documentclass{beamer}
 \usetheme{Frankfurt}
 \usecolortheme{seahorse}
-\title{Super titre de TIPE}
-\subtitle{sous-titre}
+\title{Étude sur le propagation du sars-cov1 avec machine learning}
+%\subtitle{sous-titre}
+\date{2020-2021}
 \institute{numero d'inscription : 41758}
 \author{Pedro ALEXANDRINE}
-\date{2020-2021}
+
 
 \usepackage{xurl}
 \usepackage{graphicx}
+\usepackage{appendixnumberbeamer}
 \graphicspath{ {figures/} }
 \setbeamertemplate{footline}[frame number]
 
@@ -28,7 +29,7 @@
 \section{Première approche : simple regression}
 \subsection{Principe}
 \begin{frame}
-	\frametitle{Principe de l'apprentissage supervisée}
+	\frametitle{Principe de l'apprentissage supervisée}%	A DÉGAGER
 	Entrainement donnés X et résultats Y fournis
 	\begin{figure}[b]
 		\centering
@@ -48,11 +49,11 @@
 \begin{frame}
 	\frametitle{ElasticNet}
 	\begin{figure}[b]
-		\includegraphics[scale=0.3]{EN}
+		\includegraphics[scale=0.43]{EN}
 		\centering
 		\caption{Exemple avec régression linéaire}
 	\end{figure}
-	Résultats peu intéressant dans notre cas.
+	Peu intéressant dans notre cas.
 \end{frame}
 
 \subsection{Validation croisée et hyperparamètres}
@@ -113,11 +114,25 @@
 \section{Approche multivariées}
 \subsection{Multiregresseur : 'RegressorChain'}
 \begin{frame}
+	\frametitle{Recherche corélations}
+	Corélation pour savoir les données pertinentes
+	\begin{figure}
+		\includegraphics[width=\textwidth]{cor2}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{cor1}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{cor4}
+	\end{figure}
+\end{frame}
+
+\begin{frame}%SUPPRIMER CELUI LA?
 	\frametitle{RegressorChain SVR}
 	Multiregresseur RegressorChain\\ Corrélation : Cas confirmé $\rightarrow$ hospitalisé $\rightarrow$ décès 
 	
 	\begin{figure}[h]
-		\includegraphics[scale=0.45]{mulitregr_epic_fail}%modifier le fichier
+		\includegraphics[scale=0.43]{mulitregr_epic_fail}
 		\caption{Résultat avec SVR insatisfaisant}
 	\end{figure}
 \end{frame}
@@ -126,7 +141,8 @@
 	\frametitle{RegressorChain TheilSenRegressor}
 	Changement de régresseur : meilleurs résultats
 	\begin{figure}[h]
-		\includegraphics[scale=0.45]{TheilSenRegressor multivariable to predict deces}
+		\includegraphics[scale=0.327]{theiltruc 90000 iter tol 0,001}
+		\includegraphics[scale=0.327]{theiltruc 9000 iter tol 0,001; 10 jour de plus}
 	\end{figure}
 \end{frame}
 
@@ -138,20 +154,6 @@
 		\begin{minipage}{0.5\textwidth}
 			\includegraphics[scale=0.2]{nn_sk}
 		\end{minipage}
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Recherche corélations}
-	Corélation pour savoir les données pertinentes
-	\begin{figure}
-		\includegraphics[width=\textwidth]{cor2}
-	\end{figure}
-	\begin{figure}
-		\includegraphics[width=\textwidth]{cor1}
-	\end{figure}
-	\begin{figure}
-		\includegraphics[width=\textwidth]{cor4}
 	\end{figure}
 \end{frame}
 
@@ -195,6 +197,15 @@
 	Modèle peu fiable hors situation stabilisée ou début d'évolution
 \end{frame}
 
+\appendix
+
+\begin{frame}
+	\frametitle{Augmentation du décalage}
+	Résultats insatisfaisant
+	\begin{figure}
+		\includegraphics[width=0.95\textwidth]{NN_2}
+	\end{figure}
+\end{frame}
 
 
 \end{document}
