@@ -41,10 +41,15 @@
 \headcommand {\slideentry {2}{2}{6}{14/14}{Réseau neuronal}{0}}
 \headcommand {\beamer@framepages {14}{14}}
 \headcommand {\gdef \insertmainframenumber {14}}
-\headcommand {\beamer@partpages {15}{14}}
-\headcommand {\beamer@subsectionpages {15}{14}}
-\headcommand {\beamer@sectionpages {15}{14}}
-\headcommand {\beamer@documentpages {14}}
+\headcommand {\partentry {\translate {Appendix}}{1}}
+\headcommand {\beamer@partpages {1}{14}}
+\headcommand {\beamer@sectionpages {7}{14}}
+\headcommand {\beamer@subsectionpages {9}{14}}
+\headcommand {\beamer@appendixpages {15}}
+\headcommand {\beamer@partpages {15}{28}}
+\headcommand {\beamer@subsectionpages {15}{28}}
+\headcommand {\beamer@sectionpages {15}{28}}
+\headcommand {\beamer@documentpages {28}}
 \headcommand {\gdef \inserttotalframenumber {0}}
 \headcommand {\gdef \inserttotalframenumber {14}}
 \headcommand {\gdef \appendixtotalframenumber {0}}

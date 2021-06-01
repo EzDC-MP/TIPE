@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.6)  27 MAY 2021 13:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.6)  1 JUN 2021 23:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -699,33 +699,194 @@ Package csquotes Info: ... configuration file loaded successfully.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
 ))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2019/11/15 version 4.22 text color boxes
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box73
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen277
+\pgf@nodesepend=\dimen278
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks47
+\verbatim@line=\toks48
+\verbatim@in@stream=\read3
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box74
+\tcb@upperbox=\box75
+\tcb@lowerbox=\box76
+\tcb@phantombox=\box77
+\c@tcbbreakpart=\count316
+\c@tcblayer=\count317
+\tcolorbox@number=\count318
+\tcb@temp=\box78
+\tcb@temp=\box79
+\tcb@temp=\box80
+\tcb@temp=\box81
+\tcb@out=\write5
+\tcb@record@out=\write6
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count319
+\lst@gtempboxa=\box82
+\lst@token=\toks49
+\lst@length=\count320
+\lst@currlwidth=\dimen279
+\lst@column=\count321
+\lst@pos=\count322
+\lst@lostspace=\dimen280
+\lst@width=\dimen281
+\lst@newlines=\count323
+\lst@lineno=\count324
+\lst@maxwidth=\dimen282
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count325
+\lst@skipnumbers=\count326
+\lst@framebox=\box83
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '4.22'
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.te
+x
+Library (tcolorbox): 'tcblistingscore.code.tex' version '4.22'
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '4.22'
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+))
+\c@tcblisting=\count327
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '4.22'
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen283
+\pgffor@skip=\dimen284
+\pgffor@stack=\toks50
+\pgffor@toks=\toks51
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count328
+\pgfplotmarksize=\dimen285
+)
+\tikz@lastx=\dimen286
+\tikz@lasty=\dimen287
+\tikz@lastxsaved=\dimen288
+\tikz@lastysaved=\dimen289
+\tikz@lastmovetox=\dimen290
+\tikz@lastmovetoy=\dimen291
+\tikzleveldistance=\dimen292
+\tikzsiblingdistance=\dimen293
+\tikz@figbox=\box84
+\tikz@figbox@bg=\box85
+\tikz@tempbox=\box86
+\tikz@tempbox@bg=\box87
+\tikztreelevel=\count329
+\tikznumberofchildren=\count330
+\tikznumberofcurrentchild=\count331
+\tikz@fig@count=\count332
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count333
+\pgfmatrixcurrentcolumn=\count334
+\pgf@matrix@numberofcolumns=\count335
+)
+\tikz@expandcount=\count336
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+\tcb@waterbox=\box88
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.22'
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '4.22'
+\tcb@testbox=\box89
+\tcb@totalupperbox=\box90
+\tcb@totallowerbox=\box91
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count316
-\l__pdf_internal_box=\box73
-)
-(./presentation.aux)
+\l__kernel_color_stack_int=\count337
+\l__pdf_internal_box=\box92
+) (./presentation.aux)
 \openout1 = `presentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -763,17 +924,17 @@ LaTeX Font Info:    ... okay on input line 21.
 
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count317
-\scratchdimen=\dimen277
-\scratchbox=\box74
-\nofMPsegments=\count318
-\nofMParguments=\count319
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count320
-\MPscratchDim=\dimen278
-\MPnumerator=\count321
-\makeMPintoPDFobject=\count322
-\everyMPtoPDFconversion=\toks48
+\scratchcounter=\count338
+\scratchdimen=\dimen294
+\scratchbox=\box93
+\nofMPsegments=\count339
+\nofMParguments=\count340
+\everyMPshowfont=\toks52
+\MPscratchCnt=\count341
+\MPscratchDim=\dimen295
+\MPnumerator=\count342
+\makeMPintoPDFobject=\count343
+\everyMPtoPDFconversion=\toks53
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -784,8 +945,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box75
-Package hyperref Info: Link coloring OFF on input line 21.
+\AtBeginShipoutBox=\box94
+Package hyperref Info: Link coloring OFF on input line 71.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -797,72 +958,72 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count323
+\c@section@level=\count344
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
+LaTeX Info: Redefining \ref on input line 71.
+LaTeX Info: Redefining \pageref on input line 71.
+LaTeX Info: Redefining \nameref on input line 71.
  (./presentation.out) (./presentation.out)
-\@outlinefile=\write5
-\openout5 = `presentation.out'.
+\@outlinefile=\write7
+\openout7 = `presentation.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 21.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 71.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 21.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 71.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 21.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 21.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 71.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 21.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 21.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 21.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 71.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 21.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 21.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 21.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 71.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 21.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 21.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 21.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 71.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 21.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 21.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 71.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 21.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 71.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 21.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 21.
+(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 21.
+(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 21.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 21.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 21.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 21.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 71.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 71.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 21
+(Font)              `pureletters' in the math version `normal' on input line 71
 .
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 21
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 71
 .
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 21.
+(Font)              `pureletters' in the math version `bold' on input line 71.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 21
+(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 71
 .
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 21.
+ut line 71.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/translator/translator-basic-dicti
 onary-English.dict
@@ -887,8 +1048,10 @@ Dictionary: translator-numbers-dictionary, Language: English
 (/usr/local/texlive/2020/texmf-dist/tex/latex/translator/translator-theorem-dic
 tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) (./presentation.nav) [1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/up
-dmap/pdftex.map}
+)
+\c@lstlisting=\count345
+ (./presentation.nav) [1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/upd
+map/pdftex.map}
 
 ] (./presentation.toc) [2
 
@@ -896,24 +1059,24 @@ dmap/pdftex.map}
 <figures/gscv.png, id=169, 825.0825pt x 615.29875pt>
 File: figures/gscv.png Graphic file (type png)
 <use figures/gscv.png>
-Package pdftex.def Info: figures/gscv.png  used on input line 41.
+Package pdftex.def Info: figures/gscv.png  used on input line 91.
 (pdftex.def)             Requested size: 222.77525pt x 166.13287pt.
  [3
 
  <./figures/gscv.png>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 104
+.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 104
+.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 54.
+ut line 104.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -922,7 +1085,8 @@ thkerncmss.
 <figures/SVR_premierdecoup.png, id=208, 1087.06125pt x 662.475pt>
 File: figures/SVR_premierdecoup.png Graphic file (type png)
 <use figures/SVR_premierdecoup.png>
-Package pdftex.def Info: figures/SVR_premierdecoup.png  used on input line 54.
+Package pdftex.def Info: figures/SVR_premierdecoup.png  used on input line 104.
+
 (pdftex.def)             Requested size: 217.40839pt x 132.49265pt.
  [4
 
@@ -930,20 +1094,20 @@ Package pdftex.def Info: figures/SVR_premierdecoup.png  used on input line 54.
 <figures/kfold.png, id=251, 659.46375pt x 285.065pt>
 File: figures/kfold.png Graphic file (type png)
 <use figures/kfold.png>
-Package pdftex.def Info: figures/kfold.png  used on input line 70.
+Package pdftex.def Info: figures/kfold.png  used on input line 120.
 (pdftex.def)             Requested size: 197.84064pt x 85.52016pt.
 
-Overfull \hbox (44.19571pt too wide) in paragraph at lines 70--70
+Overfull \hbox (44.19571pt too wide) in paragraph at lines 120--120
 [][] 
  []
 
 <figures/tscv.png, id=252, 643.40375pt x 264.99pt>
 File: figures/tscv.png Graphic file (type png)
 <use figures/tscv.png>
-Package pdftex.def Info: figures/tscv.png  used on input line 70.
+Package pdftex.def Info: figures/tscv.png  used on input line 120.
 (pdftex.def)             Requested size: 193.02261pt x 79.4976pt.
 
-Overfull \hbox (39.37769pt too wide) in paragraph at lines 70--70
+Overfull \hbox (39.37769pt too wide) in paragraph at lines 120--120
 [][] 
  []
 
@@ -954,10 +1118,10 @@ Overfull \hbox (39.37769pt too wide) in paragraph at lines 70--70
 File: figures/SVR_avant_pt_dinflexion.png Graphic file (type png)
 <use figures/SVR_avant_pt_dinflexion.png>
 Package pdftex.def Info: figures/SVR_avant_pt_dinflexion.png  used on input lin
-e 86.
+e 136.
 (pdftex.def)             Requested size: 126.30891pt x 83.24905pt.
 
-Overfull \hbox (3.39485pt too wide) in paragraph at lines 86--86
+Overfull \hbox (3.39485pt too wide) in paragraph at lines 136--136
 [][] 
  []
 
@@ -965,10 +1129,10 @@ Overfull \hbox (3.39485pt too wide) in paragraph at lines 86--86
 File: figures/SVR_apres_pt_dinflexion.png Graphic file (type png)
 <use figures/SVR_apres_pt_dinflexion.png>
 Package pdftex.def Info: figures/SVR_apres_pt_dinflexion.png  used on input lin
-e 86.
+e 136.
 (pdftex.def)             Requested size: 126.04794pt x 83.24905pt.
 
-Overfull \hbox (3.13388pt too wide) in paragraph at lines 86--86
+Overfull \hbox (3.13388pt too wide) in paragraph at lines 136--136
 [][] 
  []
 
@@ -980,7 +1144,7 @@ Overfull \hbox (3.13388pt too wide) in paragraph at lines 86--86
 File: figures/mr_c10000_eps0001 copie.png Graphic file (type png)
 <use figures/mr_c10000_eps0001 copie.png>
 Package pdftex.def Info: figures/mr_c10000_eps0001 copie.png  used on input lin
-e 98.
+e 148.
 (pdftex.def)             Requested size: 195.73236pt x 135.70778pt.
  [7
 
@@ -991,13 +1155,13 @@ File: figures/theiltruc 9000 iter tol 0,001; 10 jour de plus.png Graphic file (
 type png)
 <use figures/theiltruc 9000 iter tol 0,001; 10 jour de plus.png>
 Package pdftex.def Info: figures/theiltruc 9000 iter tol 0,001; 10 jour de plus
-.png  used on input line 108.
+.png  used on input line 158.
 (pdftex.def)             Requested size: 151.24435pt x 113.43326pt.
 <figures/theiltruc 90000 iter tol 0,001.png, id=375, 462.528pt x 346.896pt>
 File: figures/theiltruc 90000 iter tol 0,001.png Graphic file (type png)
 <use figures/theiltruc 90000 iter tol 0,001.png>
 Package pdftex.def Info: figures/theiltruc 90000 iter tol 0,001.png  used on in
-put line 108.
+put line 158.
 (pdftex.def)             Requested size: 151.24435pt x 113.43326pt.
  [8
 
@@ -1006,10 +1170,10 @@ ltruc 90000 iter tol 0,001.png>]
 <figures/nn_sk.png, id=417, 785.93625pt x 854.19125pt>
 File: figures/nn_sk.png Graphic file (type png)
 <use figures/nn_sk.png>
-Package pdftex.def Info: figures/nn_sk.png  used on input line 119.
+Package pdftex.def Info: figures/nn_sk.png  used on input line 169.
 (pdftex.def)             Requested size: 157.18446pt x 170.83522pt.
 
-Overfull \hbox (3.53954pt too wide) in paragraph at lines 119--119
+Overfull \hbox (3.53954pt too wide) in paragraph at lines 169--169
 [][] 
  []
 
@@ -1019,21 +1183,21 @@ Overfull \hbox (3.53954pt too wide) in paragraph at lines 119--119
 <figures/decal2.png, id=456, 212.795pt x 124.465pt>
 File: figures/decal2.png Graphic file (type png)
 <use figures/decal2.png>
-Package pdftex.def Info: figures/decal2.png  used on input line 130.
+Package pdftex.def Info: figures/decal2.png  used on input line 180.
 (pdftex.def)             Requested size: 106.39723pt x 62.23235pt.
 <figures/decal1.png, id=457, 152.57pt x 119.44624pt>
 File: figures/decal1.png Graphic file (type png)
 <use figures/decal1.png>
-Package pdftex.def Info: figures/decal1.png  used on input line 130.
+Package pdftex.def Info: figures/decal1.png  used on input line 180.
 (pdftex.def)             Requested size: 76.2848pt x 59.72296pt.
 <figures/décalage 7 jour deces.png, id=458, 462.528pt x 346.896pt>
 File: figures/décalage 7 jour deces.png Graphic file (type png)
 <use figures/décalage 7 jour deces.png>
 Package pdftex.def Info: figures/décalage 7 jour deces.png  used on input line
- 130.
+ 180.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-Overfull \vbox (7.61562pt too high) detected at line 130
+Overfull \vbox (7.61562pt too high) detected at line 180
  []
 
 [10
@@ -1043,7 +1207,7 @@ s.png>]
 <figures/NN_1.png, id=501, 534.99875pt x 392.46625pt>
 File: figures/NN_1.png Graphic file (type png)
 <use figures/NN_1.png>
-Package pdftex.def Info: figures/NN_1.png  used on input line 142.
+Package pdftex.def Info: figures/NN_1.png  used on input line 192.
 (pdftex.def)             Requested size: 141.3554pt x 103.69763pt.
 <figures/NN mlpregressor 140k iter (updated data).png, id=502, 462.528pt x 346.
 896pt>
@@ -1051,7 +1215,7 @@ File: figures/NN mlpregressor 140k iter (updated data).png Graphic file (type p
 ng)
 <use figures/NN mlpregressor 140k iter (updated data).png>
 Package pdftex.def Info: figures/NN mlpregressor 140k iter (updated data).png  
-used on input line 142.
+used on input line 192.
 (pdftex.def)             Requested size: 141.87585pt x 106.4092pt.
  [11
 
@@ -1059,10 +1223,10 @@ used on input line 142.
 <figures/NN_3.png, id=542, 540.8205pt x 221.02576pt>
 File: figures/NN_3.png Graphic file (type png)
 <use figures/NN_3.png>
-Package pdftex.def Info: figures/NN_3.png  used on input line 150.
+Package pdftex.def Info: figures/NN_3.png  used on input line 200.
 (pdftex.def)             Requested size: 324.4948pt x 132.61647pt.
 
-Overfull \hbox (17.20493pt too wide) in paragraph at lines 150--150
+Overfull \hbox (17.20493pt too wide) in paragraph at lines 200--200
  [] 
  []
 
@@ -1072,7 +1236,7 @@ Overfull \hbox (17.20493pt too wide) in paragraph at lines 150--150
 <figures/NN_2.png, id=582, 565.11125pt x 416.55624pt>
 File: figures/NN_2.png Graphic file (type png)
 <use figures/NN_2.png>
-Package pdftex.def Info: figures/NN_2.png  used on input line 159.
+Package pdftex.def Info: figures/NN_2.png  used on input line 209.
 (pdftex.def)             Requested size: 215.10196pt x 158.55362pt.
  [13
 
@@ -1081,46 +1245,99 @@ Package pdftex.def Info: figures/NN_2.png  used on input line 159.
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 166.
+(hyperref)                removing `\translate ' on input line 216.
 
-\tf@nav=\write6
-\openout6 = `presentation.nav'.
+(./NN deces datagouv copie.py
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-\tf@toc=\write7
-\openout7 = `presentation.toc'.
+ [15
 
-\tf@snm=\write8
-\openout8 = `presentation.snm'.
+]
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
+22.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 170.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 170.
-(./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 170.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 170.
-Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 8A48A53D49AB8412A99E7670FA7DE7FD;446.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/ts1cmss.fd
+File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+(./covid_deces copie.py [20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22])
+(./multi regressor tipe copie.py [23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+[28]
+\tf@nav=\write8
+\openout8 = `presentation.nav'.
+
+\tf@toc=\write9
+\openout9 = `presentation.toc'.
+
+\tf@snm=\write10
+\openout10 = `presentation.snm'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 222.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 222.
+ (./presentation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 222.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 222.
+
+
+Package rerunfilecheck Warning: File `presentation.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `presentation.out':
+(rerunfilecheck)             Before: 8A48A53D49AB8412A99E7670FA7DE7FD;446
+(rerunfilecheck)             After:  E9960132F91BBACAD22B04D87A38DF2A;487.
  ) 
 Here is how much of TeX's memory you used:
- 19052 strings out of 480608
- 365483 string characters out of 5903631
- 619766 words of memory out of 5000000
- 34425 multiletter control sequences out of 15000+600000
- 548432 words of font info for 68 fonts, out of 8000000 for 9000
+ 27206 strings out of 480608
+ 550819 string characters out of 5903631
+ 911333 words of memory out of 5000000
+ 42430 multiletter control sequences out of 15000+600000
+ 548777 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,20n,67p,799b,761s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></us
-r/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb>
-Output written on presentation.pdf (14 pages, 770814 bytes).
+ 58i,20n,83p,799b,2034s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb>
+Output written on presentation.pdf (28 pages, 805520 bytes).
 PDF statistics:
- 699 PDF objects out of 1000 (max. 8388607)
- 615 compressed objects within 7 object streams
- 35 named destinations out of 1000 (max. 500000)
+ 1065 PDF objects out of 1200 (max. 8388607)
+ 964 compressed objects within 10 object streams
+ 64 named destinations out of 1000 (max. 500000)
  224 words of extra memory for PDF output out of 10000 (max. 10000000)
 
