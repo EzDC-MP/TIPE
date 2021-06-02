@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.13)  10 MAY 2021 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.13)  27 MAY 2021 15:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -477,8 +477,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 27.
  (./MCOT.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 27.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 27.
-Package rerunfilecheck Info: File `MCOT.out' has not changed.
-(rerunfilecheck)             Checksum: 61F7DA991A4F42BC0FC7CF06E1CC7172;43.
+
+
+Package rerunfilecheck Warning: File `MCOT.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `MCOT.out':
+(rerunfilecheck)             Before: 5E80ABC2DF65D10C99C4A1C46495F627;44
+(rerunfilecheck)             After:  61F7DA991A4F42BC0FC7CF06E1CC7172;43.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 27.
  ) 
 Here is how much of TeX's memory you used:
