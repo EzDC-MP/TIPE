@@ -2,7 +2,7 @@
 \documentclass{beamer}
 \usetheme{Frankfurt}
 \usecolortheme{seahorse}
-\title{Étude sur le propagation du Covid 19 avec machine learning}
+\title{Étude sur le propagation du Covid-19 avec machine learning}
 %\subtitle{sous-titre}
 \date{2020-2021}
 \institute{numero d'inscription : 41758}
@@ -79,6 +79,19 @@
 	\tableofcontents
 \end{frame}
 %%%PARLER D'APPRENTISSAGE SUPERVISÉ
+
+\begin{frame}
+	\frametitle{Utilisation faite de l'apprentissage automatique}
+Choix du modèle :\\ \textcolor{blue}{model\\}
+\textcolor{white}{Celui là en blanc\\}
+\pause
+Entrainement sur données X : \\ \textcolor{blue}{model.fit}(X)\\
+\textcolor{white}{Celui là en blanc\\}
+\pause
+Utilisation du modèle : \\ \textcolor{blue}{model.predict}(nouveauX)
+\end{frame}
+
+
 \section{Première approche : simple regression}
 \subsection{Validation croisée et hyperparamètres}
 \begin{frame}
@@ -168,6 +181,12 @@
 	\end{figure}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Illustration des idées}
+	\begin{figure}[t]
+		\includegraphics[scale=0.23]{NN illu}
+	\end{figure}
+\end{frame}
 \begin{frame}
 	\frametitle{Décalage de courbes}
 	Représentation avant et aprés décalage
