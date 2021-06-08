@@ -1,7 +1,7 @@
 ##Methode SVR##
 import matplotlib.pyplot as plt
 import pandas as pd
-from sklearn.model_selection import train_test_split  #sklearn c'est pour le machine learning et la on prends de quoi séparer nos données
+#from sklearn.model_selection import train_test_split  #sklearn c'est pour le machine learning et la on prends de quoi séparer nos données
 from sklearn.pipeline import make_pipeline  #permet de réunir la normalisation et l'algorithme en une seule fonction
 from sklearn.preprocessing import StandardScaler  #permet de normaliser les données pour que ça fonctionne mieu
 from sklearn.linear_model import ElasticNet #l'algorithme qu'on utilise
@@ -10,11 +10,11 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import make_scorer
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import TimeSeriesSplit
-from dist_moy import dist_moy
+#from dist_moy import dist_moy
 
 ##############################################################################
 svr = SVR()
-params = {'svr__C' : [10**i for i in range(6,7)]}#,
+params = {'svr__C' : [10**i for i in range(1,8)]}#,
           #'svr__epsilon' : [0.003],
           #'svr__gamma' : [i for i in [1000, 100, 10, 0.1, 0.001, 'scale']]}
 ##########################Traitement de données################################

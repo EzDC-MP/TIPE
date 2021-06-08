@@ -1,15 +1,15 @@
 %%%%%%%%%%%%%%%%%%%%%%% Le TIPE !! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %cc/cv de overleaf.com :s
 
-%%% EXPLICITER CE QUE FAIT LES PARAMS %%%
+%%% EXPLICITER CE QUE FONT LES PARAMS %%%
 
 %%%%% intro/doc info %%%%%%
 \documentclass{beamer}[aspectratio = 43]
 \usetheme{Frankfurt}
 \usecolortheme{whale}
-\title{Prédiction de décès du Covid19 grâce au machine learning.}
+\title{Prédiction des décès dus au COVID-19 grâce au Machine Learning}
 \subtitle{}
-\author{Enzo De Carvalho}
+\author{Enzo DE CARVALHO}
 \date{
 	Numéro d'inscription : 29448\\%
 	\vspace{5pt}
@@ -40,7 +40,7 @@
 	\tableofcontents
 \end{frame}
 
-\section{Première approche : simple regression}
+\section{Premières approches : simples regressions}
 \subsection*{Principe}
 \begin{frame}
 	\frametitle{Principe de la démarche}
@@ -49,7 +49,7 @@
 		\includegraphics[scale=0.7]{super_schema}
 	\end{figure}
 	%\textcolor{blue}{Entraînement supervisé} :\\
-	$\hookrightarrow$ le modèle $\hat{g}$ généralise les données connues $Y$ fournies.
+	$\hookrightarrow$ le modèle $\hat{g}$ généralise les données connues $E$ fournies
 \end{frame}
 
 \subsection*{Regression Linéaire}
@@ -66,7 +66,7 @@
 		\end{minipage}%
 		\begin{minipage}{0.65\textwidth}
 			\begin{itemize}
-				\item[] $t$ les données (le temps)
+				\item[] $t$ le temps
 				\item[] 
 				$\omega = 
 				\begin{pmatrix}
@@ -78,8 +78,8 @@
 	\end{figure}
 	\onslide<2>
 	\vspace{20pt}
-	le modèle \textcolor{blue}{ElasticNet} détermine alors $\omega$.\\
-	Le résultat dépend des hyperparamètres : $\alpha$ et $\rho$
+	Le modèle \textcolor{blue}{ElasticNet} détermine alors $\omega$\\
+	Le résultat dépend des hyperparamètres $\alpha$ et $\rho$
 	
 
 \end{frame}
@@ -87,7 +87,7 @@
 \begin{frame}
 	\frametitle{Première application}
 	\begin{figure}
-		Prédictions entre le 2020/11/01 et 2020/12/16.
+		Prédictions entre le 01/11/2020 et 16/12/2020
 		\begin{minipage}{0.8\textwidth}
 					\includegraphics[scale=0.6]{EN_2020-11-01}
 		\end{minipage}%
@@ -97,15 +97,15 @@
 			\item[] $\alpha = 0.1$
 			\end{itemize}
 		\end{minipage}
-		\caption{Résultats peu satisfaisant... (ici \texttt{l1\_ratio} est $\rho$)}
+		\caption{Résultats peu satisfaisants...}
 	\end{figure}
 \end{frame}
 
 \subsection*{Optimisation d'hyperparamètres}
 \subsection*{Résultats avec SVR}
 \begin{frame}
-	\frametitle{SVR ; Premier résultat}
-	Modèle \textcolor{blue}{SVR}% du module \texttt{scikit-learn}.\\
+	\frametitle{SVR}
+	Modèle \textcolor{blue}{SVR} ( \textcolor{blue}{Régresseur} à \textcolor{blue}{Support Vectoriel} )% du module \texttt{scikit-learn}.\\
 	\\
 	Hyperparamètres :
 	\begin{itemize}
@@ -133,16 +133,21 @@
 
 \subsubsection*{Cross-validation}
 \begin{frame}
-	\frametitle{Validation croisée}
-	Pour une combinaison d'hyperparamètre :
+	\frametitle{Validation Croisée}
+	Grille d'hyperparamètres :\\
+	\hspace{1cm}\texttt{params = \{'svr\_\_C' : [10, 100, ...],
+		\\ \hspace{3cm}'svr\_\_eps' : [0.1, 0.01, ..], ... \} }
+	\onslide<2>
+	\vspace{0.2cm}
+	\\Pour une combinaison d'hyperparamètres :
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.25]{VC}
+		\includegraphics[scale=0.21]{VC}
 	\end{figure}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Stratégie pour la Validation croisée}
+	\frametitle{Stratégie pour la Validation Croisée}
 		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.7]{kfold_}
@@ -165,9 +170,9 @@
 			\centering
 			\tiny{\texttt{\{'svr\_\_C' : 1000000\}}}
 		\end{minipage}
-	\caption{à partir du 2020/10/15, puis du 2020/11/01}
+	\caption{à partir du 15/10/2020, puis du 01/11/2020}
 	\end{figure}
-	$\Rightarrow$ \'Echec de géneralisation.
+	$\Rightarrow$ \'Echec de géneralisation
 \end{frame}
 
 \begin{frame}
@@ -181,11 +186,11 @@ Facebook
 	\end{itemize}
 \end{frame}
 
-\section{Approche multivariées}
+\section{Approches multivariées}
 \subsection*{Multiregresseur : 'RegressorChain'}
 \begin{frame}
 	\frametitle{RegressorChain SVR}
-	Approche multivarié avec \textcolor{blue}{RegressorChain}\\
+	Approche multivariée avec \textcolor{blue}{RegressorChain}\\
 	%\tiny{(description de scikit : \url{https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.RegressorChain.html########sklearn.multioutput.RegressorChain})}\\
 	%\normalsize{\textit{"Each model makes a prediction in the order specified by the chain using all of the available features provided to the model plus the predictions of models that are earlier in the chain."}}
 	\texttt{params = \{\\'svr\_\_C' : [10**i for i in range(1,8)],\\ 
@@ -199,7 +204,7 @@ Facebook
 \subsection*{Réseau neuronal}
 \begin{frame}
 	\frametitle{Réseau neuronal}
-	Approche avec un \textcolor{blue}{réseau de neurone}
+	Approche avec des \textcolor{blue}{réseaux neuronaux}
 	\begin{figure}[t]
 		\centering
 		\begin{minipage}{0.5\textwidth}
@@ -233,16 +238,25 @@ Facebook
 
 \begin{frame}
 	\frametitle{Application avec réseau neuronal}
-	taux de corrélation entre\\ \texttt{total\_cas\_confirmes} et \texttt{total\_deces\_hopital} : \texttt{0.977939} 
+	Taux de corrélation entre\\ \texttt{total\_cas\_confirmes} et \texttt{total\_deces\_hopital} : \texttt{0.977939} 
 	\begin{figure}
 		\includegraphics[scale=0.4]{NN_up_}
 	\end{figure}
 	$\Rightarrow$ échec du modèle sans la courbe des cas confirmés
 \end{frame}
 
+\section{Conclusion}
 \begin{frame}
 	\frametitle{Conclusion}
-$\Rightarrow$ Difficultés de géneralisation des modèles proposés, trop dépendant du point d'inflexion.
+	
+	Plusieurs essais sur plusieurs modèles: 
+	\begin{itemize}
+		\onslide<2->
+		\item[$\Rightarrow$] Prédictions justes sur les périodes sans variations
+		\onslide<3>
+		\item[$\Rightarrow$] Difficulté de prédictions sans le point d'inflexion
+	\end{itemize}
+	
 \end{frame}
 
 %%%%%%% La fin %%%%%%%%
@@ -269,13 +283,43 @@ $\Rightarrow$ Difficultés de géneralisation des modèles proposés, trop dépe
 \begin{frame}
 	\frametitle{Détails sur la regression linéaire}
 	\centering
-	\includegraphics[scale=0.4]{EN_old}
+	\includegraphics[scale=0.6]{EN_old_edit}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Détails sur la regression multivarié}
+	\frametitle{Détails sur la regression multivariée}
 	\centering
-	\includegraphics[scale=0.5]{Multi_regresseur}
+	\includegraphics[scale=0.6]{Multi_regresseur}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Annexes}
+	\includegraphics[scale=0.6]{code_svr0}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Annexes}
+	\includegraphics[scale=0.55]{code_svr1}%%CORRIGER !!
+\end{frame}
+
+\begin{frame}
+	\frametitle{Annexes}
+	\includegraphics[scale=0.52]{code_svr2}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Annexes}
+	\includegraphics[scale=0.55]{code_mr0}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Annexes}
+	\includegraphics[scale=0.55]{code_mr1}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Annexes}
+	\includegraphics[scale=0.55]{code_mr2}
 \end{frame}
 
 \end{document}
